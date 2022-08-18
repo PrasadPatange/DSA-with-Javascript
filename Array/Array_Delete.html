@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Delete Element in Array</title>
+    <script>
+        // let data = [60, 20, 50, 1, 3, 10];
+        // // console.log(data);
+        // let position = 3;
+        // for(let i = position; i <data.length-1 ; i++){
+        //     console.log(data[i])
+        //     //  [60, 20, 50, 3, 10, 10]
+        //     data[i] = data[i+1]
+        // }
+        //  // [60, 20, 50, 3, 10]
+        // data.length = data.length-1;
+        // console.log(data)
+
+        function DeleteElement(){
+            let data = [60, 20, 50, 1, 3, 10];
+            let position = document.getElementById('position').value;
+            position = parseInt(position);
+            for(let i = position; i < data.length-1; i++){
+                data[i] = data[i+1];
+            }
+            data.length = data.length-1;
+            console.log(data);
+        }
+        // //  Delete Element in array Using ByDefault Function :-
+        let items = [60, 20, 50, 1, 3, 10];
+        items.splice(3,1);
+        console.log(items);
+
+    </script>
+</head>
+<body>
+    <input type="text" id="position" placeholder="Enter Position">
+    <button onclick="DeleteElement()">Delete</button>
+    
+</body>
+</html>

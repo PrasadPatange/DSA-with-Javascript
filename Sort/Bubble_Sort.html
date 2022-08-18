@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Bubble Sort</title>
+    <script>
+     let arr = [40,30,25,12];
+     console.log("Array :  ",arr);
+     for(let i=0; i<arr.length; i++){
+        //  console.log("i : ",i," Arr First : ",arr);
+         for(let j=0; j<arr.length; j++){
+            console.log("j : ",1)
+            //  console.log("j : ",j," Arr : ",arr);
+            //  if(40 > 30){}
+            if(arr[j] > arr[j+1]){
+              let temp = arr[j]; //temp = 40
+              arr[j] = arr[j+1]; // 40 = 30 => arr[j] = 30
+            arr[j+1] = temp;  // 30 = 40 => arr[j+1] = 40
+            // [30,40,...]
+            }
+        }
+     }
+     console.log(" Bubble Sort : ",arr);
+    </script>
+</head>
+<body>
+    <h1>Bubble Sort In Javascript</h1>
+</body>
+</html>
+<!-- 
+ Array :   (4) [40, 30, 25, 12]
+=>i :  0  Arr First :  (4) [40, 30, 25, 12]
+j :  0  Arr :  (4) [40, 30, 25, 12]
+j :  1  Arr :  (4) [30, 40, 25, 12]
+j :  2  Arr :  (4) [30, 25, 40, 12]
+j :  3  Arr :  (4) [30, 25, 12, 40]
+=>i :  1  Arr First :  (4) [30, 25, 12, 40]
+j :  0  Arr :  (4) [30, 25, 12, 40]
+j :  1  Arr :  (4) [25, 30, 12, 40]
+j :  2  Arr :  (4) [25, 12, 30, 40]
+j :  3  Arr :  (4) [25, 12, 30, 40]
+=>i :  2  Arr First :  (4) [25, 12, 30, 40]
+j :  0  Arr :  (4) [25, 12, 30, 40]
+j :  1  Arr :  (4) [12, 25, 30, 40]
+j :  2  Arr :  (4) [12, 25, 30, 40]
+j :  3  Arr :  (4) [12, 25, 30, 40]
+=>i :  3  Arr First :  (4) [12, 25, 30, 40]
+j :  0  Arr :  (4) [12, 25, 30, 40]
+j :  1  Arr :  (4) [12, 25, 30, 40]
+j :  2  Arr :  (4) [12, 25, 30, 40]
+j :  3  Arr :  (4) [12, 25, 30, 40]
+Array Bubble Sort :  (4) [12, 25, 30, 40]
+ -->

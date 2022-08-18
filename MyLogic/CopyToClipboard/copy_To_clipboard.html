@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Copy To ClipBoard</title>
+    <link rel="stylesheet" href="./copy_To_clipboard.css">
+    <script src="./copy_To_clipboard.js"></script>
+  </head>
+  <body>
+    <h1>Copy In Clipnoard in Javascript</h1>
+    <textarea id="to-copy" spellcheck="true">
+        Write something and copy it into your ClipBoard by clicking in the button below.
+    </textarea>
+    <button id="copy" type="button">
+      Copy in ClipBoard
+      <span class="copiedText" aria-hidden="true">Copied!</span>
+    </button>
+    <textarea
+      id="cleared"
+      placeholder="Paste Your Copied Content Here. Just to Test..."
+    ></textarea>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task</title>
+    <script>
+      const resOfDas = [
+        {
+          id: 1,
+          name: "abc",
+        },
+        {
+          id: 2,
+          name: "abc",
+        },
+        {
+          id: 3,
+          name: "abc",
+        },
+        {
+          id: 4,
+          name: "abc",
+        },
+        {
+          id: 5,
+          name: "abc",
+        },
+        {
+          id: 6,
+          name: "abc",
+        },
+        {
+          id: 7,
+          name: "abc",
+        },
+      ];
+      const roleUserDash = [
+        {
+          id: 1,
+          name: "abc",
+        },
+        {
+          id: 2,
+          name: "abc",
+        },
+        {
+          id: 3,
+          name: "abc",
+        },
+        {
+          id: 4,
+          name: "abc",
+        },
+        {
+          id: 5,
+          name: "abc",
+        },
+      ];
+      let empArr = resOfDas.filter(res => !roleUserDash.some(res1 => res.id === res1.id));
+      // let empArr = resOfDas.filter((res) => {
+      //   return !roleUserDash.some((res1) => {
+      //     return res.id === res1.id;
+      //   });
+      // });
+      console.log("empArr : ", empArr);
+      // let result = result1.filter(o1 => !result2.some(o2 => o1.id === o2.id));
+    </script>
+  </head>
+  <body></body>
+</html>

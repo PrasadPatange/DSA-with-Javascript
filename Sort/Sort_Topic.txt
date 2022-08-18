@@ -1,0 +1,22 @@
+ ********** Sorting Algorithm ***************************
+Important for Front End Developer : Searching,sorting,array
+
+1) Selection Sort With Javascript :-
+   1) How selection sorting works.
+   2) Implement Selection sort.
+   3) Time Complexity.
+    -> Complexity = O(n**2); (beacuse it has 2 for loop).
+
+2) Descending Order Sorting :- 
+   1) Recap Selection Sorting.
+   2) Two ways of Descending Order.
+   3) Implement Descending Sorting both way.
+
+3) Insertion Sort :-
+   1) How Insertion Sort Works.
+   2) Implement Insertion Sort Code.
+
+4) Bubble Sort with Recursion :-
+   1) How Bubble Sort Works.
+   2) Understand Logic.
+   3) Implement Code.

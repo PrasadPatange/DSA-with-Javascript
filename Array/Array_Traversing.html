@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Array Traversing</title>
+    <script>
+      // 1) Array :
+      let data = [39, 32, 13, 0, 11, 10];
+      // 2) Traversing with Loop :
+      // for(let i = 0; i < data.length; i++){
+      //     document.write(`Element at ${i} is ${data[i]} <br>`)
+      // }
+      //3) Accessing Elements :
+      // let x = 3
+      // document.write(data[x])
+      function getElement() {
+        let Ele = document.getElementById("ele").value;
+        // 5) Validation :
+        if (
+          Ele < data.length &&
+          typeof parseInt(Ele) === "number" &&
+          typeof data[Ele] !== "undefined" &&
+          data[Ele] !== null
+        ) {
+          alert(data[Ele]);
+        } else {
+          alert("Please Enter Valid Input");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div style="text-align: justify">
+      <h1>1) Array Traversing and Accessing :-</h1>
+      <h3>-> Make HTML Page with Basic Array.</h3>
+      <h3>-> Traversing with Loop.</h3>
+      <h3>-> Accessing Elements.</h3>
+      <h3>-> Access element with text input and button.</h3>
+      <h3>-> Validation.</h3>
+    </div>
+    <!-- 4) Access element with text input and button : -->
+    <input type="text" id="ele" placeholder="Enter Position" />
+    <button onclick="getElement()">Get Element</button>
+  </body>
+</html>

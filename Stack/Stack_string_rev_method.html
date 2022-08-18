@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Reverse String Using ByDefault Methods Push() and Pop()</title>
+    <script>
+      // let data = [];
+      // function reverseStr(item) {
+      //   for (let i = 0; i < item.length; i++) {
+      //     data.push(item[i]);
+      //   }
+      //   for (let i = 0; i < item.length; i++) {
+      //     item[i] = data.pop();
+      //   }
+      // }
+      // let str = "prasad";
+      // let str = document.getElementById('str').value;
+      // console.log("String : ", str);                   //      prasad
+      // str = str.split("");
+      // console.log("Convert String into Array: ", str); //     ['p', 'r', 'a', 's', 'a', 'd']
+      // reverseStr(str);
+      // console.log("Reverse The Array: ", str);         //     ['d', 'a', 's', 'a', 'r', 'p']
+      // console.log("Reverse String : ", str.join(""));  //     dasarp
+
+      // ************ Using Input And Button *************************
+      let data = [];
+      function reverseStr() {
+        let str = document.getElementById("str").value;
+        str = str.split("");
+        for (let i = 0; i < str.length; i++) {
+          data.push(str[i]);
+        }
+        for (let i = 0; i < str.length; i++) {
+          str[i] = data.pop();
+        }
+        document.getElementById('para').innerText = str.join("")
+        console.log( str.join(""));
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Reverse String Using ByDefault Methods Push() and Pop()</h1>
+    <input type="text" placeholder="Enter String" id="str" />
+    <button onclick="reverseStr()">Click to Reverse String </button>
+    <h3 id="para"></h3>
+  </body>
+</html>

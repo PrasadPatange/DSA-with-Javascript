@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Merge Two Arrays</title>
+    <script>
+      let data1 = [20, 12, 32, 11, 25, 41];
+      let data2 = [10, 21, 30, 40];
+      let MergeArr = [];
+      for (let i = 0; i < data1.length; i++) {
+        MergeArr[i] = data1[i];
+      }
+      for (let i = 0; i < data2.length; i++) {
+        MergeArr[data1.length + i] = data2[i];
+      }
+      console.log("Merge Array : ", MergeArr);
+    //   let defaultArr = [...data1, ...data2]; // This method also use to Clone Array.
+    //   console.log("Default Function : ", defaultArr);
+    //   let reverseArr = defaultArr.reverse();
+    //   console.log("Reverse Array : ", reverseArr);
+    </script>
+  </head>
+  <body></body>
+</html>
+<!-- 
+   Time Complexity : 
+    10 lines + loops iterate array 6+4 = 10 total = 20 Lines
+    Space Complexity :
+    variables data1,data2,MergeArr,i ----- 4
+
+-->

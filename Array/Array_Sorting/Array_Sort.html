@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Array Sort</title>
+    <script>
+      let array = [4, 3, 2, 10, 5, 11, 100];
+      console.log("Array : ", array);
+      const sortArray = (array) => {
+        // iterate 1st i element and carry on
+        for (let i = 0; i < array.length; i++) {
+          // iterate 2st element i.e. i+1 and carry on
+          for (let j = i + 1; j < array.length; j++) {
+            console.log("j : ",1)
+            // compare 1st i element is > than 2nd i+1 element and carry forward
+            // if(4>3){}
+            if (array[i] > array[j]) {
+              // condition true then array[i] store in temp variable.
+              temp = array[i]; //temp = 4
+              array[i] = array[j]; // array[i] = 3
+              array[j] = temp; // array[j] = 4
+              // [3,4,...]
+            }
+          }
+        }
+        return array;
+      };
+      console.log("Sorted Array : ", sortArray(array));
+
+      // Descending
+      const DsortArray = (array) => {
+        // iterate 1st i element and carry on
+        for (let i = 0; i < array.length; i++) {
+          // iterate 2st element i.e. i+1 and carry on
+          for (let j = i + 1; j < array.length; j++) {
+            // compare 1st i element is > than 2nd i+1 element and carry forward
+            if (array[i] < array[j]) {
+              // condition true then array[i] store in temp variable.
+              temp = array[i]; //temp = 4
+              array[i] = array[j]; // array[i] = 3
+              array[j] = temp; // array[j] = 4
+              // [3,4,...]
+            }
+          }
+        }
+        return array;
+      };
+      console.log("Descending Sorted  Array : ", DsortArray(array));
+    </script>
+  </head>
+  <body></body>
+</html>

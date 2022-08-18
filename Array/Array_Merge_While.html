@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Merge Two Arrays with While Loop</title>
+    <script>
+        //This is Only Apply For Sorted Array
+      let data1 = [1, 3, 5, 7, 9, 10];
+      let data2 = [2, 4, 6, 8];
+      let data3 = [];
+      let d1 = 0;
+      let d2 = 0;
+      let d3 = 0;
+      while (d1 < data1.length && d2 < data2.length) {
+        // write logic for sorted Array
+        if (data1[d1] < data2[d2]) {
+          data3[d3] = data1[d1];
+          d1++;
+        //   console.log("d1 : ",d1)
+        } else {
+            data3[d3] = data2[d2];
+            d2++;
+            // console.log("d2 : ",d2)
+        }
+        d3++;
+        // console.log("d3 : ",d3)
+    }
+    // logic for data1 [10, 12] remaining elements.
+    while(d1 < data1.length){
+        data3[d3] = data1[d1];
+        d1++;
+        d3++;
+        // console.log("d1 ++: ",d1)
+        // console.log("d3 ++: ",d3)
+    }
+      console.log('Sorted Merge Array: ',data3);
+    </script>
+  </head>
+  <body></body>
+</html>
+
+<!-- 
+   Time Complexity : 
+    22 lines + loops iterate array 6+4 = 10 total = 32 Lines
+    Space Complexity :
+    variables data1,data2,data3,d1,d2,d3 ----- 6
+
+-->

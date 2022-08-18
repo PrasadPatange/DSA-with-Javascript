@@ -1,0 +1,61 @@
+
+1) Array Traversing and Accessing :-
+   -> Make HTML Page with Basic Array.
+   -> Traversing with Loop.
+   -> Accessing Elements.
+   -> Access element with text input and button.
+   -> Validation.
+
+2) Insert Element in Array :-
+   -> Make Array, define the position.
+   -> Use Loop to insert new Element.
+   -> Insert Element with text input and button.
+   -> Insert Element with bydefault function Ex:- splice()
+
+3) Delete Element in Array :-
+   -> Make Array, define the position.
+   -> Use Loop to delete new Element.
+   -> Delete Element with text input and button.
+   -> Delete Element with bydefault function Ex:- splice()
+
+4) Search Element in Array (Basic Linear) :-
+   -> Make Array, define the SearchItem.
+   -> Use Loop to Search new Element.
+   -> Search Element with text input and button.
+   -> Search Element with bydefault function Ex:- indexOf()
+
+5) Merge Two Array :-
+   -> Make Three Arrays.
+   -> Use 2 Different Loop to Merge Element.
+   -> Shortcut for Merge Array(Default Function)
+   -> Shortcut for Reverse Array Element(Default Function)
+
+6) Merge Two Array (While Loop) :-
+   -> Make Three Arrays.
+   -> Use While Loop to Merge Element.
+
+   -> Compare this Logic with Last one.
+      -> 1) Space Complexity = memory (less)
+      -> 2) Time Complexity  = number of lines (less)
+
+      comapare : 
+     * A) Merge Two Array(for loop) :
+          1) Time Complexity : 
+             10 lines + loops iterate array 6+4 = 10 total = 20 Lines
+          2) Space Complexity :
+            variables data1,data2,MergeArr,i ----- 4 memory space
+
+     * B) Merge Two Array(while loop) :
+         1) Time Complexity : 
+            22 lines + loops iterate array 6+4 = 10 total = 32 Lines
+         2) Space Complexity :
+            variables data1,data2,data3,d1,d2,d3 ----- 6
+
+   * As compare to A and B for loop best for space and time Complexity in case
+     of normal array Merge
+   * But if we want to merge and sort array then B i.e using While loop is better than A.
+
+7) Array Sorting ( Bubble Sort ) :-
+     1) Basic Understanding
+     2) Write Code and Understand step by step
+     

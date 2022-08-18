@@ -1,0 +1,331 @@
+          DATA STRUCTURE AND ALGORITHM (DSA)
+                  With JavaScript.
+
+1) What is Data Structure ?
+    -> Way to organize data so that we can use this data efficiently.
+    -> Example :-
+                [8,2,1,6,0,4,3,7,5]
+                After Applyig DSA
+                [0,1,2,3,4,5,6,7,8]
+
+2) What is Algorithm ?
+    -> Steps or a process to arrange Data.
+    -> Steps to structured data from unstructured data. 
+    -> Example :-
+                [8,2,1,6,0,4,3,7,5]
+                After Applyig DSA
+                [0,1,2,3,4,5,6,7,8]
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+                                                    Data Structure
+                                                        |
+                    ----------------------------------------------------------------------------
+                    |                                                                          |
+            Primitive Data Structure                                       Non-Primitive Data Structure                                    
+                    |                                                                          |
+            ------------------------------------------                 ----------------------------------------------   
+            |           |              |             |                 |                     |                      |
+            Integer     Float        Character      Pointer         Arrays                   Lists                  Files
+                                                                                            |
+                                                                        ------------------------------------------------
+                                                                        |                                              |
+                                                                Linear Lists                               Non-Linear Lists
+                                                                        |                                              |
+                                                            ----------------------                         -------------------------
+                                                            |                    |                         |                       |
+                                                        Stacks               Queues                    Graphs                  Trees
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+3) Operations Of Data Structre :
+
+   -> 1) Traversal(Iterate)
+   -> 2) Insertion 
+   -> 3) Deletion
+   -> 4) Searching 
+   -> 5) Sorting
+   -> 6) Merging
+
+Different Algorithm can be use for Options.
+
+4) Operations Of Data Structres :
+  -> 1) Array
+  -> 2) Stack
+  -> 3) Queue
+  -> 4) Tree
+  -> 5) Graph 
+  -> 6) Insertion
+  -> 7) Recursion
+  -> 8) Search
+  -> 9) Sorting
+  -> 10) Merge
+  -> 11) Map
+  -> 12) Set
+
+5) Couse ++ :-
+  * Logical Part
+    -> Nested Loops
+    -> Lowest and Highest Value
+    -> Objects
+    -> Update Specific Value
+       etc.
+
+6) Array Traversing and Accessing :-
+   -> Make HTML Page with Basic Array.
+   -> Traversing with Loop.
+   -> Accessing Elements.
+   -> Access element with text input and button.
+   -> Validation.
+
+7) Insert Element in Array :-
+   -> Make Array, define the position.
+   -> Use Loop to insert new Element.
+   -> Insert Element with text input and button.
+   -> Insert Element with bydefault function Ex:- splice()
+
+8) Delete Element in Array :-
+   -> Make Array, define the position.
+   -> Use Loop to delete new Element.
+   -> Delete Element with text input and button.
+   -> Delete Element with bydefault function Ex:- splice()
+
+9) Search Element in Array (Basic Linear) :-
+   -> Make Array, define the SearchItem.
+   -> Use Loop to Search new Element.
+   -> Search Element with text input and button.
+   -> Search Element with bydefault function Ex:- indexOf()
+
+10) Merge Two Array :-
+   -> Make Three Arrays.
+   -> Use 2 Different Loop to Merge Element.
+   -> Shortcut for Merge Array(Default Function)
+   -> Shortcut for Reverse Array Element(Default Function)
+
+11) Merge Two Array (While Loop) :-
+   -> Make Three Arrays.
+   -> Use While Loop to Merge Element.
+
+   -> Compare this Logic with Last one.
+      -> 1) Space Complexity = memory (less)
+      -> 2) Time Complexity  = number of lines (less)
+
+      comapare : 
+     * A) Merge Two Array(for loop) :
+          1) Time Complexity : 
+             10 lines + loops iterate array 6+4 = 10 total = 20 Lines
+          2) Space Complexity :
+            variables data1,data2,MergeArr,i ----- 4 memory space
+
+     * B) Merge Two Array(while loop) :
+         1) Time Complexity : 
+            22 lines + loops iterate array 6+4 = 10 total = 32 Lines
+         2) Space Complexity :
+            variables data1,data2,data3,d1,d2,d3 ----- 6
+
+   * As compare to A and B for loop best for space and time Complexity in case
+     of normal array Merge
+   * But if we want to merge and sort array then B i.e using While loop is better than A.
+
+ 12) ALGORITHM COMPLEXITY :-
+      1) Algorithm Basics
+      2) What is Algorithm Complexity
+
+        (1) Time Complexity :
+           -> The Time Complexity is mainly calculated by counting the number of steps to finish the exection.
+
+         (2) Space Complexity :
+           -> Space Complexity is the amount of space required to solve a problem.
+           -> Space Complexity = Auxiliary space + Input Size.
+           
+         (3) Big O notation : Use to denote Complexity(both).
+
+13) Array Sorting ( Bubble Sort ) :-
+     1) Basic Understanding
+     2) Write Code and Understand step by step
+     
+14) Recursion Data Structre :-
+     1) What is Recursion Data Structre.
+      -> Re Called Function (Khudko bar bar Call krna)
+    Example :
+   1) 
+      funtion apple(){
+         ....
+         ....
+         apple();    //Infinite loop
+      }
+      apple();
+    2)
+      funtion apple(){
+         ....
+         ....
+         if(condition){
+         apple();    //To avoid Infinite loop use proper condition
+         }
+      }
+      apple();
+
+15) While Loop With Array Of Strings :-
+Example :-
+    let dataString = ["Sachin", "Virat", "Rohit", "Dhoni"];
+    let i = 0;
+    while (i < dataString.length) {
+        console.log(dataString[i]);
+        i++;
+    }
+
+16) Indirect Recursion Data Structre :-
+     1) What is Indirect Recursion Data Structre.
+      ->  Called Function inside Another Function
+    Example :
+            1) 
+               funtion apple(){
+                  ....
+                  ....
+                  if(condition){
+                  banana();    
+                  }
+               }
+               apple();
+            
+               funtion banana(){
+                  ....
+                  ....
+                  if(condition){
+                  apple();   
+                  }
+               }
+      banana();
+
+17) Recursion Array With Reverse :-
+    1) Understand how logic will work.
+    2)Implement Code.
+    3)Test with the different arrays.
+    4)Javascript Default function for reverse array.
+
+18) Head and Tail Recursion :-
+    1) Head Recursion :
+     -> Recursion function before condition
+      Ex :
+        function test(x){
+         console.log(x); //before condition
+         if(x>0){
+            test(x-1);
+         }
+        }
+        test(5);
+    2) Tail Recursion :
+     -> Recursion function after condition
+           Ex :
+        function test(x){
+         if(x>0){
+            test(x-1);
+         }
+         console.log(x); // After condition
+        }
+        test(5);
+
+19) Stack With Javascript :-
+   1) What is Stack :
+      ->  It is a Linear Data Structure.
+      -> FIFO = First In First Out.
+      -> LIFO = Last  In First Out.
+      -> Also Set Max Value Of Stack.
+   2) Push Element in Stack :
+      -> Push new Element at top of the Stack.
+   3) Pop Element in Stack :
+      -> Remove Element at top of the Stack.
+
+20) Stack With Input and Buttons :-
+   1) Print Function.
+   2) Add text input and buttons for push , pop.
+   3) Operations with Buttons.
+   4) Test All Operations.
+
+21) Reverse String with Stack :-
+   1) Understand Logic for reverse string with Stack
+   2) Make stack push and pop both Operations
+   3) Define string and convert to Array
+   4) push and pop string to stack
+   6) Get reverse string back from stack
+   7) JavaScript function
+   8) Test All Operations
+
+22) Stack with class :-
+   1) Understand logic to implement stack with class.
+   2) Make stak class.
+   3) Make push and pop both functions for operations.
+   4) Test Stack operations with console.
+
+********** Queue *********************************** 
+23) Queue with Javascript :-
+   1) Understand what is Queue.
+     -> Linear Data Structre.
+     -> FIFO =>  First In First Out.
+     -> 1) enqueue => Add element (front) in queue.
+     -> 2) dequeue => Remove element (end).
+   2) Understand enqueue and dequeue operations.
+   3) Implement enqueue and dequeue functions for operations.
+   4) Test Queue operations with console.
+
+24) More Operations and Input in Queue :-
+   1) Front , Rear and isEmpty Operatons.
+   2) Do Operations with inputs.
+   3) Test All Operatons.
+
+25) Circular Queue i Javascript :- 
+   1) Understand Circular Queue.
+   2) Make class for Queue.
+   3) Enqueue and Dequeue Operations.
+   4) Text Flow.
+
+*********** Searching Algorithm **************
+Important for Front End Developer : Searching,sorting,array
+26) Search Algorithm in DA :-
+   1) What is search and search Algorithm.
+   2) Understand Linear search.
+   3) The Complexity of linear search.
+     -> time Complexity => f(n) n = input
+     -> Linear Search Complexity = f(n) = O(n)  (because it use single for loop)
+   4) Implement linear algorithm.
+   5) Implement linear algorithm with inputs also.
+
+Important for Interview :
+ Binary Search :-
+ 1) Iterative Approach
+ 2) Recursive Approach
+
+27) Binary Search with Iterative Approach :- 
+   1) How binary search works.
+   2) What is iterative Approach.
+   3) Implement binary search Algorithm.
+   4) Implement binary search Algorithm with input also.
+
+28) Binary Search with Recursive Approach :-
+   1) How binary search works.
+   2) What is recursive Approach.
+   3) Implement Binary Search with Recursion.
+   4) Implement Binary Algorithm with Inputs also.
+
+********** Sorting Algorithm ***************************
+Important for Front End Developer : Searching,sorting,array
+
+29) Selection Sort With Javascript :-
+   1) How selection sorting works.
+   2) Implement Selection sort.
+   3) Time Complexity.
+     -> Complexity = O(n**2); (beacuse it has 2 for loop)
+
+30) Descending Order Sorting :- 
+   1) Recap Selection Sorting.
+   2) Two ways of Descending Order.
+   3) Implement Descending Sorting both way.
+
+31) Insertion Sort :-
+   1) How Insertion Sort Works.
+   2) Implement Insertion Sort Code.
+
+32) Bubble Sort with Recursion :-
+   1) How Bubble Sort Works.
+   2) Understand Logic.
+   3) Implement Code.

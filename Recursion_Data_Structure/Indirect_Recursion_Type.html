@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Indirect Recursion Data Structure</title>
+    <script>
+      let money = 100;
+      let TotalApple = 0;
+
+      // ******** In-Direct Recursion *************
+      function BuyApple(x) {
+        if (x > 0) {
+          console.log("I Have ", x, " RS with ", TotalApple, " Apple");
+          BuyMore(x - 10);
+        } else {
+          console.log(
+            "I Don't Have More Money I Bought ",
+            TotalApple,
+            " Apples"
+          );
+        }
+      }
+
+      BuyApple(money);
+
+      function BuyMore(x) {
+        TotalApple++;
+        BuyApple(x);
+      }
+
+      // ******** Direct Recursion *************
+
+      // function BuyApple(x) {
+      //     // console.log(x)
+      //     if (x > 0) {
+      //         console.log("I Have ", x, "RS with", TotalApple, " Apple");
+      //         TotalApple++;
+      //       BuyApple(x - 10);
+      //     } else {
+      //       console.log(
+      //         "I Don't Have More Money I Bought ",
+      //         TotalApple,
+      //         " Apples"
+      //       );
+      //     }
+      //   }
+      //   BuyApple(money);
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Selection Sort With Javascript.</title>
+    <script>
+      let items = [20, 12, 53, 3, 56, 78, 0, 5, 89, 34];
+      //   Method 1 :
+      function DescendingSelectionSort_M1(data) {
+        let minId;
+        for (let i = 0; i < data.length; i++) {
+          minId = i;
+          for (let j = i + 1; j < data.length; j++) {
+            if (data[j] > data[minId]) {
+              minId = j;
+            }
+          }
+          let temp = data[minId];
+          data[minId] = data[i];
+          data[i] = temp;
+        }
+      }
+      DescendingSelectionSort_M1(items);
+      console.log("Method 1 : ", items);
+
+      //   Method 2 :
+      function DescendingSelectionSort_M2(data) {
+        let minId;
+        for (let i = data.length - 1; i >= 0; i--) {
+          // console.log(i);
+             minId = i;
+          for (let j = i - 1; j >= 0; j--) {
+            if (data[j] < data[minId]) {
+              minId = j;
+            }
+          }
+          let temp = data[minId];
+          data[minId] = data[i];
+          data[i] = temp;
+        }
+      }
+      DescendingSelectionSort_M2(items);
+      console.log("Method 2 : ", items);
+    </script>
+  </head>
+  <body>
+    <h1>Descending Order Selection Sort With Javascript.</h1>
+  </body>
+</html>

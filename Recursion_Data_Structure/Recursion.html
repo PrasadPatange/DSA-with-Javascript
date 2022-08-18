@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Recursion Data Structure</title>
+    <script>
+      // function Apple(a) {
+      //   // console.log("Called")
+      //   // Apple(); // Infinite Loop
+      //   console.log(a);
+      //   if (a < 10) {
+      //     // a++;
+      //     // Apple(a);
+      //     Apple(a+1);
+      //   }
+      // }
+      // let data = 0;
+      // Apple(data);
+
+      // Find Factorial Number Using Recursion :-
+
+      // Example : 5*4*3*2*1
+      function Factorial(num) {
+        if (num == 0) {
+          return 1;
+        }
+        // return num
+        return num * Factorial(num - 1);
+      }
+      let number = 5;
+      console.log(Factorial(number));
+      // console.log(5*Factorial(5-1)*Factorial(4-1)*Factorial(3-1)*Factorial(2-1)*Factorial(1-1))
+
+      // //While Loop With Array Of Strings
+      // let dataString = ["Sachin", "Virat", "Rohit", "Dhoni"];
+      // let i = 0;
+      // while (i < dataString.length) {
+      //     console.log(dataString[i]);
+      //     i++;
+      // }
+    </script>
+  </head>
+  <body></body>
+</html>

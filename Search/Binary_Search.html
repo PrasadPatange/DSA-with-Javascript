@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Binary Search with Iterative Approach</title>
+    <script>
+      //   let data = [5, 9, 13, 17,55,78,89];
+      //   let find = 89;
+      //   let start = 0;
+      //   let end = data.length - 1;
+      //   let position = undefined;
+      //   while (start <= end) {
+      //     let mid = Math.floor((start + end) / 2);
+      //     // console.log("mid point : ", mid);
+      //     // console.log("mid point data : ", data[mid]);
+      //     if (data[mid] == find) {
+      //       position = mid;
+      //       break;
+      //     } else if (data[mid] < find) {
+      //       start = mid + 1;
+      //     } else {
+      //       end = mid - 1;
+      //     }
+      //   }
+      //   console.log("Position : ", position);
+
+      function binarySearch() {
+        let data = [5, 9, 13, 17, 55, 78, 89];
+        let find = document.getElementById("el").value;
+        let start = 0;
+        let end = data.length - 1;
+        let position = undefined;
+        while (start <= end) {
+          let mid = Math.floor((start + end) / 2);
+          if (data[mid] == find) {
+            position = mid;
+            break;
+          } else if (data[mid] < find) {
+            start = mid + 1;
+          } else {
+            end = mid - 1;
+          }
+        }
+        console.log("Position : ", position);
+        document.getElementById("el").value = "";
+        if (!position && position != 0) {
+          alert("Enter Element Not Found.");
+        } else {
+          alert("Position is : " + position);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Binary Search with Iterative Approach</h1>
+    <input type="text" placeholder="Enter Element" id="el" />
+    <button onclick="binarySearch()">Search Element</button>
+  </body>
+</html>

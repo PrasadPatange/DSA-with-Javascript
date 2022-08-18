@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>For Loop</title>
+    <script>
+      const obj = {
+        prasad: 20,
+        pro: 30,
+      };
+      // for(let i=0; i<10; i++){
+      //     console.log(i)
+      // }
+      // for (const key in obj) {
+      //         console.log(obj[key]);
+
+      //     }
+      function reverse() {
+        let str = document.getElementById("str").value;
+        const arr = [];
+        for (const i of str) {
+          console.log(i);
+          arr.push(i);
+        }
+        console.log(arr);
+        let revArr = arr.reverse();
+        console.log(revArr);
+        let revStr = revArr.join("");
+        console.log(revStr);
+        document.getElementById("h").innerText = revStr;
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" placeholder="Enter String" id="str" />
+    <button onclick="reverse()">Reverse</button>
+    <h3 id="h"></h3>
+  </body>
+</html>

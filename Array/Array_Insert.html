@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Insert Element In Array</title>
+    <script>
+      //   let data = [60, 20, 50, 1, 3, 10];
+      // //   console.log(data);
+      //   let newEl = 70;
+      //   let position = 2;
+      // // reverse for Loop
+      // for(let i = data.length-1; i>=0; i--){
+      //     // console.log(data[i])
+      //     if( i >= position ){
+      //     //    console.log('a:',i)
+      //         data[i+1] = data[i]; // shift to next element
+      //         //[60, 20, 50, 50, 1, 3, 10]
+      //         if( i == position ){
+      //             data[i] = newEl;  // place newEl to 2 i.e. 50
+      //         }
+      //     }
+      // }
+      // console.log(data);
+
+      function insertElement() {
+        let data = [60, 20, 50, 1, 3, 10];
+        let newEl = document.getElementById("newEle").value;
+        newEl = parseInt(newEl);
+        let position = document.getElementById("position").value;
+        for (let i = data.length - 1; i >= 0; i--) {
+          if (i >= position) {
+            data[i + 1] = data[i]; // shift to next element
+            if (i == position) {
+              data[i] = newEl; // place newEl to 2 i.e. 50
+            }
+          }
+        }
+        console.log(data);
+      }
+      //  Insert Element in array Using ByDefault Function :-
+      let items = [20, 1, 22, 30];
+      items.splice(2, 0, 1000);
+      console.log(items);
+    </script>
+  </head>
+  <body>
+    <input type="text" id="position" placeholder="Enter position" />
+    <input type="text" id="newEle" placeholder="Enter New Element" />
+    <button onclick="insertElement()">Insert</button>
+  </body>
+</html>

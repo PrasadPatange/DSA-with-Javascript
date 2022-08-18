@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Queue in Javascript</title>
+    <script>
+      let queue = [];
+      let currentSize = queue.length;
+      let maxSize = 5;
+
+      function enqueue(newVal) {
+        if (currentSize >= maxSize) {
+          alert("Queue is already Full.");
+        } else {
+          queue[currentSize] = newVal;
+          currentSize++;
+        }
+      }
+      function display() {
+        console.log("Queue : ", queue);
+      }
+
+      function dequeue() {
+        if (currentSize > 0) {
+          for (let i = 0; i < queue.length; i++) {
+            // console.log(queue[i]);
+            queue[i] = queue[i + 1];
+            // 10 20 30 => 20 30 undefined
+          }
+          currentSize--;
+          queue.length = currentSize;
+        } else {
+          alert("Queue is already Empty.");
+        }
+      }
+        enqueue(10);
+        enqueue(20);
+        enqueue(30);
+        display();
+        dequeue();
+        display();
+
+
+      
+      // use bydefault function shift() and unshift() and pop() :
+      //    shift() : remove element from front
+      //    unshift(ele) : add element at front
+      //    pop() : remove element from end of array
+
+      //   function enqueue(newVal){
+      //      queue.unshift(newVal);
+      //   }
+      //   function display(){
+      //     console.log("Queue : ",queue);
+      //   }
+      //   function dequeue(){
+      //     queue.pop();
+      //   }
+      //   enqueue(10);
+      //   enqueue(20);
+      //   enqueue(30);
+      //   display();
+
+    </script>
+  </head>
+  <body>
+    <h1>Queue in Javascript</h1>
+  </body>
+</html>

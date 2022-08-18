@@ -1,0 +1,26 @@
+Important for Front End Developer : Searching,sorting,array
+1) Search Algorithm in DA :-
+   1) What is search and search Algorithm.
+   2) Understand Linear search.
+   3) The Complexity of linear search.
+     -> time Complexity => f(n) n = input
+     -> Linear Search Complexity = f(n) = O(n)  (because it use single for loop)
+   4) Implement linear algorithm.
+   5) Implement linear algorithm with inputs also.
+
+Important for Interview :
+ Binary Search :-
+ 1) Iterative Approach
+ 2) Recursive Approach
+
+27) Binary Search with Iterative Approach :- 
+   1) How binary search works.
+   2) What is iterative Approach.
+   3) Implement binary search Algorithm.
+   4) Implement binary search Algorithm with input also.
+
+28) Binary Search with Recursive Approach :-
+   1) How binary search works.
+   2) What is recursive Approach.
+   3) Implement Binary Search with Recursion.
+   4) Implement Binary Algorithm with Inputs also.

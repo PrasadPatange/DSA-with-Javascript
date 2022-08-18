@@ -1,0 +1,20 @@
+1) Queue with Javascript :-
+    1) Understand what is Queue.
+     -> Linear Data Structre.
+     -> FIFO =>  First In First Out.
+     -> 1) enqueue => Add element (front) in queue.
+     -> 2) dequeue => Remove element (end).
+   2) Understand enqueue and dequeue operations.
+   3) Implement enqueue and dequeue functions for operations.
+   4) Test Queue operations with console.
+
+2) More Operations and Input in Queue :-
+   1) Front , Rear and isEmpty Operatons.
+   2) Do Operations with inputs.
+   3) Test All Operatons.
+
+3) Circular Queue i Javascript :- 
+   1) Understand Circular Queue.
+   2) Make class for Queue.
+   3) Enqueue and Dequeue Operations.
+   4) Text Flow.

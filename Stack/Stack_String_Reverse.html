@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Stack String Reverse</title>
+    <script>
+      let data = [];
+      let currentSize = data.length;
+      function push(newVal) {
+        data[currentSize] = newVal;
+        currentSize++;
+      }
+
+      function pop() {
+        lastRemoveItem = data[currentSize - 1];
+        currentSize--;
+        data.length = currentSize;
+        return lastRemoveItem;
+      }
+      function reverseStr(item) {
+        // console.log(item)
+        for (let i = 0; i < item.length; i++) {
+          // console.log(item[i]);
+          push(item[i]);
+        }
+        for (let i = 0; i < item.length; i++) {
+          // console.log(item[i]);
+          // str = pop()
+          // console.log(pop());
+          item[i] = pop();
+        }
+      }
+      let str = "prasad";
+      console.log(str);
+      str = str.split(""); // convert string into array.  ['p', 'r', 'a', 's', 'a', 'd']
+      console.log(" convert string into array : ", str);
+      reverseStr(str);
+      console.log("Reverse Array : "); //['d', 'a', 's', 'a', 'r', 'p']
+      console.log(str);
+      console.log("convert array into string : ");
+      console.log(str.join("")); // convert array into string.  dasarp
+      // console.log("Stack: ",data);
+    </script>
+  </head>
+  <body>
+    <h1>Reverse String with Stack in Javascript</h1>
+  </body>
+</html>

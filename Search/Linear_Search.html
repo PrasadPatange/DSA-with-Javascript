@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Linear Search with Javascript</title>
+    <script>
+    //   let data = [11, 2, 4, 5, 9, 7, 51, 3, 6];
+    //   let find = 9;
+    //   let position = undefined;
+
+    //   for (let i = 0; i < data.length; i++) {
+    //     if (data[i] == find) {
+    //       position = i;
+    //       break;
+    //     }
+    //   }
+    //   console.log("Search at Position :", position);
+    //   if(!position){
+    //     alert("Element Not Found.")
+    //   }
+
+    function searchEl(){
+        let data = [11, 2, 4, 5, 9, 7, 51, 3, 6];
+      let find = document.getElementById("el").value;
+      let position = undefined;
+
+      for (let i = 0; i < data.length; i++) {
+        if (data[i] == find) {
+          position = i;
+          break;
+        }
+      }
+      console.log("Search at Position :", position);
+      if(!position && position != 0){
+        alert("Element Not Found.")
+      }else{
+        alert("Element Position is  : " + position)
+      }
+      document.getElementById("el").value = "";
+
+    }
+    </script>
+  </head>
+  <body>
+    <h1>Linear Search with Javascript</h1>
+    <input type="text" placeholder="Enter Element" id="el" />
+    <button onclick="searchEl()">Search Element</button>
+  </body>
+</html>

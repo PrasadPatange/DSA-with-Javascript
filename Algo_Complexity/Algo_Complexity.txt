@@ -1,0 +1,13 @@
+   1) ALGORITHM COMPLEXITY :-
+      1) Algorithm Basics
+      2) What is Algorithm Complexity
+
+        (1) Time Complexity :
+           -> The Time Complexity is mainly calculated by counting the number of steps to finish the exection.
+
+         (2) Space Complexity :
+           -> Space Complexity is the amount of space required to solve a problem.
+           -> Space Complexity = Auxiliary space + Input Size.
+           
+         (3) Big O notation : Use to denote Complexity(both).
+      
