@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Check Strings are Anagram</title>
+    <script>
+      function checkAnagram(str1, str2) {
+        //   console.log(str1,str2);
+        let ObjStr1 = {};
+        // Check Length same or not :-
+        if (str1.length !== str2.length) {
+          return false;
+        }
+        // Check repeat char count :-
+        for (ch of str1) {
+          // console.log(ch);
+          // Obj[key]
+          ObjStr1[ch] = (ObjStr1[ch] || 0) + 1;
+        }
+        // console.log(ObjStr1);
+
+        //   remove match char :-
+        for (ch of str2) {
+          // console.log(ch);
+          // console.log(ObjStr1[ch]);
+          if (!ObjStr1[ch]) {
+            return false;
+          }
+          ObjStr1[ch]--;
+        }
+        return true;
+      }
+      console.log("Anagram is : ",checkAnagram("hello", "olleh"));
+      
+    </script>
+  </head>
+  <body>
+    <h1>Check Strings are Anagram</h1>
+  </body>
+</html>

@@ -329,3 +329,40 @@ Important for Front End Developer : Searching,sorting,array
    1) How Bubble Sort Works.
    2) Understand Logic.
    3) Implement Code.
+
+********* Problem Solving and Logic Building ****************
+
+33) Problem Solving and Logic Building :-
+   1) Undrstand Complete Problem.
+   2) Find Solution in General way.
+   3) Break the Problem in Parts.
+   4) Think Coding Solution.
+   5) Re-Analyse Solution.
+   6) Then Write Code.
+   7) Example.
+
+********** String *************************************
+Interview :-
+34) Check Strings are Anagram :-
+   1) What is Anagram?
+    -> Two Strings has same character called Anagram.
+    -> Anagram strings are two strings built up by the same set of characters, 
+       where the order of characters is the only difference in the strings.
+    -> Ex : cat => act,tca,tac ; listen => silent ; heart => earth
+   2) Understand Logic.
+   3) Write Program to check Anagram.
+   4) Test with Different String.
+
+35) Check String Palindrome or Not :-
+   1) What is Palindrome?
+     -> A string is called a palindrome string if the reverse of that string is the same as the original string.
+     -> For example, radar , level , etc
+   2) Understand Logic.
+   3) Write Program to Check Palindrome.
+   4) Test with Different String.
+
+36) Maximum Occurring Character in String :-
+   1) Understand Logic?
+   2) Write Program.
+   3) Test with different String.
+   

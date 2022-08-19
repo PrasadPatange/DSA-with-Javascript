@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Logic Building</title>
+    <script>
+    //   let data = [10, 11, 23, 22, 30, 88, 25, 100];
+    //   let evenArr = [];
+    //   console.log("Array : ", data);
+    //   //   1st Find Even Number :
+    //   for (let i = 0; i < data.length; i++) {
+    //     // console.log(data[i]%2);
+    //     if (data[i] % 2 == 0) {
+    //       //   console.log(data[i]);
+    //       evenArr.push(data[i]);
+    //     }
+    //   }
+    //   console.log("Even Array : ", evenArr);
+
+    //   // 2nd Double even number Array :
+    //   for (let i = 0; i < evenArr.length; i++) {
+    //     evenArr[i] = evenArr[i] * 2;
+    //   }
+    //   console.log("Double the Array : ", evenArr);
+
+    //   // 3rd Find out Array length Manually :
+    //   let count = 0;
+    //   for (let i = 0; i < evenArr.length; i++) {
+    //     count++;
+    //   }
+    //   console.log("Length : ", count);
+
+    // Optimize Code :
+        let data = [10, 11, 23, 22, 30, 88, 25, 100];
+        console.log("Array : ", data);
+      let evenArr = [];
+      let count = 0;
+      for (let i = 0; i < data.length; i++) {
+        if (data[i] % 2 == 0) {
+            count++;
+          evenArr.push(data[i]*2);
+        }
+      }
+      console.log("Double the Even Array : ", evenArr);
+      console.log("Length : ", count);
+    </script>
+  </head>
+  <body>
+    <h1>
+      Find Even Values from array, Make Double of every element and Find Array
+      Length Manually.
+    </h1>
+  </body>
+</html>
