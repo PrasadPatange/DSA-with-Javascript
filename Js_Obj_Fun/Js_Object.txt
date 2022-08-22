@@ -1,0 +1,16 @@
+ Javascript Object :
+
+   1) Object.assign() : 
+        It Copies all enumerable own properties from one or more source object to  a target object.
+    
+   2) for...in : 
+        Creates loop iteration over property names in the object.
+
+    3) for...of : 
+        Creates loop iteration over iterable object values.
+
+    4) Object.keys() : 
+        Returns the names of the enumerable string properties and methods of an Object.
+    
+    5) Object.values() : 
+        Returns an array of values of the enumerable properties of an object.

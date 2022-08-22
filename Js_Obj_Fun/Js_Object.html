@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Javascript Object</title>
+    <script>
+      let student1 = {
+        studentId: 56,
+        firstName: "john",
+        lastname: "cena",
+        department: "CS",
+        email: "john@gmail.com",
+      };
+      let student2 = {
+        studentId: 57,
+        firstName: "roman",
+        lastname: "reign",
+        department: "IT",
+        hobbies: ["reading", "working out"],
+      };
+
+      // Object.assign(target ,source1, source2) : Copying Object
+      // Object.assign(student2,student1);
+      // console.log(student2);
+
+      // Benefits  :
+
+      // 1) Copying Object :
+      let student3 = Object.assign({}, student1);
+      student1.studentId = 99;
+      //  console.log(student1)
+      //  console.log(student3)
+
+      // 2) Merge Two or More Objects :
+      let obj1 = {
+        a: 1,
+        b: 2,
+      };
+      let obj2 = {
+        b: 4,
+        c: 5,
+      };
+      let obj3 = Object.assign({}, obj1, obj2);
+      //   console.log(obj3);
+
+      // 3) for...in VS for...of :
+      let student = {
+        studentId: 55,
+        name: "virat kohli",
+        email: "virat@gmail.com",
+      };
+
+      // for...in => creates loop iteration over property names in the object.
+      for (let key in student) {
+        // console.log(key);
+        //    console.log(key + " : " + student[key]);
+      }
+
+      //   for array : key will be index
+      //   for( let key in [3,4,5]) console.log(key);
+
+      //   for...of => creates loop iteration over iterable object values.
+      // for( let items of student){
+      //     // console.log(items);
+      //     // Uncaught TypeError: student is not iterable
+      // }
+
+      for (let items of [2, 3, 4]) {
+        // console.log(items);
+      }
+
+      for (let items of "string") {
+        // console.log(items);
+      }
+
+      // 4) Object.keys() :
+      //   console.log(Object.keys(student));
+
+      //   same as for...in
+      Object.keys(student).forEach((key) => {
+        // console.log(key);
+        // console.log(key + " : " + student[key]);
+      });
+
+      //   if we want keys in sort order :
+      Object.keys(student)
+        .sort()
+        .forEach((key) => {
+          // console.log(key);
+          // console.log(key + " : " + student[key]);
+        });
+
+      //   5)  Object.values() :
+      Object.values(student).forEach((value) => {
+        // console.log(value);
+      });
+
+      // Example :
+      let studentMark = {
+        studentId: 55,
+        name: "virat kohli",
+        email: "virat@gmail.com",
+        marks: {
+          maths: 78,
+          physics: 96,
+          history: 89,
+          secondLanguage: 90,
+        },
+      };
+
+      // console.log(Object.values(studentMark));
+      // console.log(Object.values(studentMark.marks));
+
+      let sum = 0;
+      // Object.values(studentMark.marks).forEach(mark => {
+      //     // sum = sum + mark;
+      //     sum += mark;
+      // });
+      // console.log("Total Marks : ",sum);
+
+      //    OR use reduce()
+
+      let sum1 = Object.values(studentMark.marks).reduce((acc, curr) => {
+        return acc + curr;
+      }, 0); //acc initial with 0
+      // console.log("Total Marks : ",sum1);
+    </script>
+  </head>
+  <body>
+    <h1>Javascript Object</h1>
+    <b>Object.assign() : </b>
+    <p>
+      It Copies all enumerable own properties from one or more source object to
+      a target object.
+    </p>
+    <b>for...in : </b>
+    <p>Creates loop iteration over property names in the object.</p>
+    <b>for...of : </b>
+    <p>Creates loop iteration over iterable object values.</p>
+    <b> Object.keys() : </b>
+    <p>
+      Returns the names of the enumerable string properties and methods of an
+      object.
+    </p>
+    <b>Object.values() : </b>
+    <p>Returns an array of values of the enumerable properties of an object</p>
+  </body>
+</html>
+
+
