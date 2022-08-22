@@ -13,7 +13,7 @@
    2) Do Operations with inputs.
    3) Test All Operatons.
 
-3) Circular Queue i Javascript :- 
+3) Circular Queue in Javascript :- 
    1) Understand Circular Queue.
    2) Make class for Queue.
    3) Enqueue and Dequeue Operations.
