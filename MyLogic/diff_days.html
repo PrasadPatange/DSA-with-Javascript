@@ -5,8 +5,8 @@
     <script>
       // 'Days Left For Ganesh Chaturthi!!!'
       //  inspire from Question 9
-      const Days_Left = (currday, Ganesh_Chaturthi) => {
-        let dt1 = new Date(currday);
+      const Days_Left = (today, Ganesh_Chaturthi) => {
+        let dt1 = new Date(today);
         let dt2 = new Date(Ganesh_Chaturthi);
         return Math.floor(
           (Date.UTC(dt2.getFullYear(), dt2.getMonth(), dt2.getDate()) -
@@ -14,62 +14,69 @@
             (1000 * 60 * 60 * 24)
         );
       };
-      let Ganesh_Chaturthi = 'Aug 31,2022';
-      let  DaysLeft = Days_Left(Date.now(), Ganesh_Chaturthi);
-      console.log(`वाट पाहता बाप्पा तुझी वर्ष कधी सरले आता तुझया आगमनाला फक्तं ${DaysLeft} दिवस उरले.😍🌍💓🥳`);
-      document.write(`वाट पाहता बाप्पा तुझी वर्ष कधी सरले आता तुझया आगमनाला फक्तं  ${DaysLeft}  दिवस उरले.😍🌍💓🥳`);
-    //   console.log(
-    //     Days_Left(Date.now(), Ganesh_Chaturthi),
-    //     "Days Left For Ganesh Chaturthi!!!"
-    //   );
-    //   console.log(
-    //     Days_Left(Date.now(), Ganesh_Chaturthi),
-    //     "गणेश चतुर्थीला दिवस बाकी!!!"
-    //   );
+      
+      let Ganesh_Chaturthi = "Aug 31,2022";
+      let DaysLeft = Days_Left(Date.now(), Ganesh_Chaturthi);
+      document.write(
+        `वाट पाहता बाप्पा तुझी वर्ष कधी सरले 
+        आता तुझया आगमनाला फक्तं  ${DaysLeft} दिवस उरले.😍🌍💓🥳`
+      ); 
+      console.log(
+        `वाट पाहता बाप्पा तुझी वर्ष कधी सरले आता तुझया आगमनाला फक्तं ${DaysLeft} दिवस उरले.😍🌍💓🥳`
+      );
+    
+      //   console.log(
+      //     Days_Left(Date.now(), Ganesh_Chaturthi),
+      //     "Days Left For Ganesh Chaturthi!!!"
+      //   );
+      //   console.log(
+      //     Days_Left(Date.now(), Ganesh_Chaturthi),
+      //     "गणेश चतुर्थीला दिवस बाकी!!!"
+      //   );
       // const finalDay = Days_Left(Date.now(), 'Aug 31,2022');
       // document.write(`${finalDay} Days Left For Ganesh Chaturthi!!!`);
 
-    //   const date_diff_indays = (date1, date2) => {
-    //     let dt1 = new Date(date1);
-    //     let dt2 = new Date(date2);
-    //     // console.log(dt1);
-    //     // console.log(dt2);
-    //     return Math.floor(
-    //       (Date.UTC(dt2.getFullYear(), dt2.getMonth(), dt2.getDate()) -
-    //         Date.UTC(dt1.getFullYear(), dt1.getMonth(), dt1.getDate())) /
-    //         (1000 * 60 * 60 * 24)
-    //     );
-    //   };
-    //   console.log(
-    //     date_diff_indays(Date.now(), "08/31/2022"),
-    //     "Days Left For Ganesh Chaturthi!!!"
-    //   );
+      //   const date_diff_indays = (date1, date2) => {
+      //     let dt1 = new Date(date1);
+      //     let dt2 = new Date(date2);
+      //     // console.log(dt1);
+      //     // console.log(dt2);
+      //     return Math.floor(
+      //       (Date.UTC(dt2.getFullYear(), dt2.getMonth(), dt2.getDate()) -
+      //         Date.UTC(dt1.getFullYear(), dt1.getMonth(), dt1.getDate())) /
+      //         (1000 * 60 * 60 * 24)
+      //     );
+      //   };
+      //   console.log(
+      //     date_diff_indays(Date.now(), "08/31/2022"),
+      //     "Days Left For Ganesh Chaturthi!!!"
+      //   );
 
       // Days Left for Ganesh Chaturthi
 
-    //   const Ganesh_Chaturthi = (currentDay, Holiday) => {
-    //     let diff = (Holiday.getTime() - currentDay.getTime()) / 1000;
-    //     diff = diff / (60 * 60 * 24);
-    //     return Math.abs(Math.round(diff));
-    //   };
-    //   Holiday = new Date("31 Aug 2022");
-    //   document.write(
-    //     Ganesh_Chaturthi(new Date(), Holiday),
-    //     " Days Left For Ganesh Chaturthi!!!"
-    //   );
+      //   const Ganesh_Chaturthi = (currentDay, Holiday) => {
+      //     let diff = (Holiday.getTime() - currentDay.getTime()) / 1000;
+      //     diff = diff / (60 * 60 * 24);
+      //     return Math.abs(Math.round(diff));
+      //   };
+      //   Holiday = new Date("31 Aug 2022");
+      //   document.write(
+      //     Ganesh_Chaturthi(new Date(), Holiday),
+      //     " Days Left For Ganesh Chaturthi!!!"
+      //   );
 
-//     const Days_Left = (currday, Ganesh_Chaturthi) => {
-//         let dt1 = new Date(currday);
-//         let dt2 = new Date(Ganesh_Chaturthi);
-//         return Math.floor(
-//        (Date.UTC(dt2.getFullYear(), dt2.getMonth(), dt2.getDate()) -
-//         Date.UTC(dt1.getFullYear(), dt1.getMonth(), dt1.getDate())) /
-//         (1000 * 60 * 60 * 24)
-//         );
-//       };
-//       let Ganesh_Chaturthi = 'Aug 31,2022';
-//       let  DaysLeft = Days_Left(Date.now(), Ganesh_Chaturthi);
-//  document.write(`वाट पाहता बाप्पा तुझी वर्ष कधी सरले आता तुझया आगमनाला फक्तं  ${DaysLeft}  दिवस उरले.😍🌍💓🥳`);
+      //     const Days_Left = (currday, Ganesh_Chaturthi) => {
+      //         let dt1 = new Date(currday);
+      //         let dt2 = new Date(Ganesh_Chaturthi);
+      //         return Math.floor(
+      //        (Date.UTC(dt2.getFullYear(), dt2.getMonth(), dt2.getDate()) -
+      //         Date.UTC(dt1.getFullYear(), dt1.getMonth(), dt1.getDate())) /
+      //         (1000 * 60 * 60 * 24)
+      //         );
+      //       };
+      //       let Ganesh_Chaturthi = 'Aug 31,2022';
+      //       let  DaysLeft = Days_Left(Date.now(), Ganesh_Chaturthi);
+      //  document.write(`वाट पाहता बाप्पा तुझी वर्ष कधी सरले आता तुझया आगमनाला फक्तं  ${DaysLeft}  दिवस उरले.😍🌍💓🥳`);
     </script>
   </head>
   <body></body>
