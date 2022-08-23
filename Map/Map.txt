@@ -1,0 +1,17 @@
+ Map Data Structure : 
+    1) What is Map
+      -> key value pair but not same as object.
+       -> Ex: { name => "prasad", age:"20" };
+        -> In Map we use key as any data type
+        -> Here Map is not a function i.e. in js map()
+
+    2) Difference Between Map and Object
+     ->
+        Object                                Map
+      1) store data in key,Value pair         1) key value pair but not same as object.
+      2) Ex: { name:"prasad', age:"20" };     2) Ex: { name => "prasad", age:"20" };
+      3) In Object only use key as a string.  3) In Map we use key as any data type.
+      
+    3) CRUD with Map
+    4) Loop with Map
+    5) Important function with Object 

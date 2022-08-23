@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Object Data Structure in JS</title>
+    <script>
+        // 1) CRUD in Object :
+        //create
+        let data = {
+            name : "prasad",
+            age : 23,
+            email : "prasad@gmail.com",
+            getName : function(){
+                return this.name
+            }
+        }
+
+        //Add
+        data.contact = 845457896; 
+
+        // remove
+        // delete data.name; 
+
+        //update
+        data.name = "Peter";  
+
+        // console.log(data);
+        // console.log(data.name);
+        // console.log(data.getName());
+
+        // 2) for...in loop :
+        for(x in data){
+            // console.log(x);
+            // console.log(data[x]);
+        }
+
+        // Object Functions :
+        
+        // 3) all keys in array : 
+        console.log(Object.keys(data));
+
+        // 4) all values in array : 
+        console.log(Object.values(data));
+
+        // 5) all data in array format :
+        console.log(Object.entries(data));
+
+    </script>
+</head>
+<body>
+    <h1>Object Data Structure in JS</h1>
+</body>
+</html>

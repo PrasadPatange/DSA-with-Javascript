@@ -1,0 +1,10 @@
+Object Data Structure :- 
+1) Object ( Hash Table ) Data Structre in JS :-
+  1) What is Object 
+     -> store data in key,Value pair
+     -> Ex: { name:"prasad', age:"20" };
+     -> In Object only use key as a string
+   2) How to make Object
+   3) Crud on Object
+   4) Loop on Object
+   5) Important function with Object

@@ -365,4 +365,43 @@ Interview :-
    1) Understand Logic?
    2) Write Program.
    3) Test with different String.
-   
+
+************** Object DSA *************************
+37) Object ( Hash Table ) Data Structre in JS :-
+   1) What is Object 
+     -> store data in key,Value pair
+     -> Ex: { name:"prasad', age:"20" };
+     -> In Object only use key as a string
+   2) How to make Object
+   3) Crud on Object
+   4) Loop on Object
+   5) Important function with Object
+***************************************************
+MAP and SET Data Structre not use in all Programming Languages
+************* Map DSA ******************************
+38) Map Data Structure : 
+    1) What is Map
+      -> key value pair but not same as object.
+       -> Ex: { name => "prasad", age:"20" };
+        -> In Map we use key as any data type
+        -> Here Map is not a function i.e. in js map()
+
+    2) Difference Between Map and Object
+     ->
+        Object                                Map
+      1) store data in key,Value pair         1) key value pair but not same as object.
+      2) Ex: { name:"prasad', age:"20" };     2) Ex: { name => "prasad", age:"20" };
+      3) In Object only use key as a string.  3) In Map we use key as any data type.
+
+    3) CRUD with Map
+    4) Loop with Map
+    5) Important function with Object 
+
+************* Set DSA **************************************
+39) Set Data Structure :
+   1) What is set  
+    -> it is similar to array but advance it remove duplicate values.
+   2) Difference Between Set and Array 
+   3) CRUD with set
+   4) Loop with set
+   5) Important Function with set.

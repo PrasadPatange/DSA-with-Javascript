@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Set DSA with Javascript.</title>
+    <script>
+        // Array :
+        let arr = ["prasad","peter","prasad"];
+        // console.log(arr);
+        // ['prasad', 'peter', 'prasad']
+        
+        // Set :
+        let data = new Set(["prasad","peter","prasad"]);
+        // console.log(data);
+        //  {'prasad', 'peter'}
+
+        // Add :
+        data.add("Gajanan");
+        data.add({"email" : "abc@gmail.com"});
+
+        // find :
+        console.log(data.has("peter"));   
+        // true
+        
+        // Check Size :
+        // console.log(data.size);
+        // 4 
+        
+        // console.log(data);
+
+        // delete :
+        // data.delete('prasad');
+
+        // console.log(data);
+
+        // clear :
+        // data.clear();
+        // console.log(data);
+
+        // for...of loop :
+        for (x of data) {
+            // console.log(x);
+        };
+
+        // forEach loop :
+        data.forEach((val) => {
+            // console.log(val);
+        });
+
+        // functions :
+        // values :
+        console.log(data.values());
+        
+        // keys :
+        console.log(data.keys());
+        
+        // entries :
+        console.log(data.entries());
+    </script>
+</head>
+<body>
+    <h1>Set DSA with Javascript.</h1>
+</body>
+</html>

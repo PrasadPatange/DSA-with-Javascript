@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Map DSA with Javascript</title>
+    <script>
+        // let data = new Map();
+        // Map(0) {size: 0}
+
+        // let data = new Map([
+        //     ['name','prasad']
+        // ]);
+        // Map(1) {'name' => 'prasad'}
+
+        // 1) CRUD in Map : 
+        // Create
+        let data = new Map([
+            ['name','prasad'],
+            [true,'bool key'],
+            [100,'Hundred']
+        ]);
+        // Map(3) {'name' => 'prasad', true => 'bool key', 100 => 'Hundred'}
+
+        // Add
+        data.set('color','Green');
+
+        console.log(data);
+        
+        // 2) Get Size :
+        // console.log(data.size);
+        // 4
+        
+        // 3) Get Key :
+        // console.log(data.has(100));
+        // true
+
+        // 4) Get Value : 
+        // console.log(data.get(100));
+        // Hundred
+
+        // 5) clear all data : 
+        // data.clear()
+        // console.log(data);
+        // Map(0) {size: 0}
+
+        // Apply Loop :
+           
+        // 6) for...of loop :
+        for (x of data) {
+            // console.log(x);
+            // all keys :
+            // console.log(x[0]);
+            // all values :
+            // console.log(x[1]);
+        } 
+
+        // 7) forEach loop :
+        data.forEach((val,key) => {
+            // all values :
+            // console.log(val);
+            // all keys :
+            console.log(key);
+        })
+
+    </script>
+</head>
+<body>
+    <h1>Map DSA with Javascript</h1>
+</body>
+</html>
