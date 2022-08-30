@@ -405,3 +405,63 @@ MAP and SET Data Structre not use in all Programming Languages
    3) CRUD with set
    4) Loop with set
    5) Important Function with set.
+
+************** String Interview Questions ************************
+40) String Interview Questions :
+1) convert str in only 1 array.
+2) convert string to array with reach character.
+3) convert string to array with space or any sequence.
+4) replace any character.
+5) Get substring from string.
+6) remove last character.
+7) remove first character.
+8) remove string before spacific character.
+9) Reverse String.
+10) remove extra space from both sides. 
+
+*********** Linked List ******************************
+41) Make Linked List in Javascript :
+1) How Linked List Work.
+2) Understand the Logic of Link List.
+3) Write Program for Linked List.
+4) insert Nodes and Test.
+
+-------------------         --------------------       ------------------
+|  val   | next    | -----> |  val   | next    | ----> | val | null     |
+-------------------         --------------------       ------------------
+  (Head) node                                               (Tail) node
+
+next => Address of next node
+
+In Javascript node is display using Object : 
+
+val | next   =>  
+{
+   value  : 100,
+   next : #aqrtq
+}
+sequence :
+{
+   value  : 100,
+   next : {
+      value : 200,
+      next : {
+         ... null
+      }
+   }
+}
+
+42) Traversing Linked List : 
+1) Understand Logic.
+2) Write Function for Traversing.
+3) Print Nodes.
+
+43) Remove Node From Linked List :
+1) Understand Logic.
+2) Write Function for Remove Node.
+3) Check Nodes.
+
+44) Insert Node at any Position in Linked List :
+1) Understand Logic.
+2) Write Function for Linked List.
+3) Insert Nodes and Test.

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>String Interview Question</title>
+    <script>
+        let str = "Hello, How are You";
+
+        // 1) convert str in only 1 array.
+        console.log("Using Split('') : ",str.split(''));
+        console.log("Using Spread Operator : ",[...str]);
+
+        // 2) convert string to array with reach character.
+           console.log("Using Split() : ",str.split());
+
+        // 3) convert string to array with space or any sequence.
+           console.log("Using Split(' ') : ",str.split(' '));
+           console.log("Using Split('a') : ",str.split('a'));
+
+        //   4) replace any character.
+        console.log("str.replace() : ",str.replace('H',"_"));
+        console.log("str.replace() all : ",str.replace(/H/g,"_"));
+
+        //    5) Get substring from string.
+        console.log("substring : ",str.substring(6,10));
+        console.log("substring : ",str.substring(5,str.length));
+        
+        // 6) remove last character.
+        console.log("substring remove last char : ",str.substring(1,str.length));
+        
+        // 7) remove first character.
+        console.log("substring remove first char : ",str.substring(0,str.length-1));
+
+        // 8) remove string before spacific character.
+        let temp = str.split('o');
+        console.log("remove string before spacific character : ",temp);
+        console.log("remove string before spacific character : ",temp[0]);
+
+        // 9) Reverse String : 
+        let rev = str.split("").reverse().join("");
+        console.log("reverse string : ",rev);
+
+        // 10) Remove extra space from both sides : 
+        let str1 = "     Hello    ";
+        console.log("string :", str1);
+        console.log("Remove extra space from both sides :", str1.trim());
+
+    </script>
+</head>
+<body>
+<h1>***** String Interview Questions *****</h1>
+<h3>1) convert str in only 1 array.</h3>
+<h3>2) convert string to array with reach character.</h3>
+<h3>3) convert string to array with space or any sequence.</h3>
+<h3>4) replace any character.</h3>
+<h3>5) Get substring from string.</h3>
+<h3>6) remove last character.</h3>
+<h3>7) remove first character.</h3>
+<h3>8) remove string before spacific character.</h3>
+<h3>9) Reverse String.</h3>
+<h3>10) remove extra space from both sides.</h3> 
+</body>
+</html>

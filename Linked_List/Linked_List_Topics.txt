@@ -1,0 +1,47 @@
+*********** Linked List ******************************
+1) Make Linked List in Javascript :
+1) How Linked List Work.
+2) Understand the Logic of Link List.
+3) Write Program for Linked List.
+4) insert Nodes and Test.
+
+
+-------------------         --------------------       ------------------
+|  val   | next    | -----> |  val   | next    | ----> | val | null     |
+-------------------         --------------------       ------------------
+  (Head) node                                               (Tail) node
+
+next => Address of next node
+
+In Javascript node is display using Object : 
+
+val | next   =>  
+{
+   value  : 100,
+   next : #aqrtq
+}
+sequence :
+{
+   value  : 100,
+   next : {
+      value : 200,
+      next : {
+         ... null
+      }
+   }
+}
+
+2) Traversing Linked List : 
+1) Understand Logic.
+2) Write Function for Traversing.
+3) Print Nodes.
+
+3) Remove Node From Linked List :
+1) Understand Logic.
+2) Write Function for Remove Node.
+3) Check Nodes.
+
+4) Insert Node at any Position in Linked List :
+1) Understand Logic.
+2) Write Function for Linked List.
+3) Insert Nodes and Test.

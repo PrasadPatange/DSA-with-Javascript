@@ -22,3 +22,15 @@ Interview :-
    1) Understand Logic?
    2) Write Program.
    3) Test with different String.
+
+************** String Interview Questions ************************
+1) convert str in only 1 array.
+2) convert string to array with reach character.
+3) convert string to array with space or any sequence.
+4) replace any character.
+5) Get substring from string.
+6) remove last character.
+7) remove first character.
+8) remove string before spacific character.
+9) Reverse String.
+10) remove extra space from both sides. 
