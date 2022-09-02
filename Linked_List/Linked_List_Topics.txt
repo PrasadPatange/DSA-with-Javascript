@@ -45,3 +45,8 @@ sequence :
 1) Understand Logic.
 2) Write Function for Linked List.
 3) Insert Nodes and Test.
+
+5) Search Node in Linked List :
+1) Understand Logic.
+2) Write Function for Search Node.
+3) Check Result.

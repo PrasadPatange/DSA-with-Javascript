@@ -1,0 +1,47 @@
+******** Tree Data Structure ***********************
+1) Tree DSA in Javascript : 
+1) What is Tree DS :
+  => Non-Linear Data Structre.
+  => Tree is a Hierarchical representation of data in the form of node and edges.
+  => Tree use in For ex: DOM .
+
+2) What is Binary Tree :
+  => Maximum 2 nodes (left and Right Side)
+
+3) What is Binary Search Tree :
+  => Left Node < Root < Right Node
+  => Binary Search Tree :
+      
+               (10)
+               /   \
+ left node   (5)   (15)    right node
+      
+      
+4) Important Terminology for Tree :
+  => Tree :
+                        (A)     -> Root Node      [Level 1]
+                       /   \    -> Edge
+                     (B)   (C)  -> Node           [Level 2]
+                   /   \    /  \
+                 (D)   (E)  (F)  (H)              [Level 3]
+                 /      \          \
+               (J)      (K)        (I)            [Level 4]
+
+   => Terminology :
+     (1) A => Root Node.
+     (2) Child of A => B and C.
+     (3) Sibling of B => C.
+     (4) Sibling of E => D.
+     (5) Degree of Node C => 2 (F and H).
+     (6) Degree of Node H => 1 (I).
+     (7) Termial Node => J , K , F , I .
+     (8) K path => A-B-E .
+     
+5) Operations of BST 
+6) Understand All Things.
+
+2) Start with Binary Search Tree :
+1) Make Class for BST.
+2) Define Empty Tree.
+3) Check BST is Empty.
+4) Make Node Class.

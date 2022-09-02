@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Linked List Delete Node in Javascript</title>
+    <title>Linked List Search Node base on Value in Javascript</title>
     <script>
       // using OOPs
       class List {
@@ -43,8 +43,32 @@
             }
             let nextNode = lead.next.next;
             lead.next = nextNode;
-            console.log(lead);
+            // console.log(lead);
           }
+        }
+
+        // Lead Node(400) => before node  = for 500
+        searchNode(data){
+           let result = undefined;
+           let lead = this.head;
+           let loop = true;
+        //    Understand While Loop : 
+        //    let counter = 1;
+        //    while(counter<6){
+        //     lead =lead.next;
+        //     console.log(lead);
+        //     counter++;
+        //    }
+           while(loop){
+             lead = lead.next;
+            //  console.log(lead);
+             loop = !!lead; // covert bool if value is not there. 
+             if(loop && lead.value === data){
+                loop = false;
+                result = lead;
+             }
+            }
+            console.log(result);
         }
       }
 
@@ -55,12 +79,12 @@
       list.appendNode(600);
       list.appendNode(700);
       list.traversing();
-      list.deleteNode(4);
+      list.searchNode(500);
 
         // console.log(list);
     </script>
   </head>
   <body>
-    <h1>Linked List Delete Node in Javascript</h1>
+    <h1>Linked List Search based on Value in Javascript</h1>
   </body>
 </html>
