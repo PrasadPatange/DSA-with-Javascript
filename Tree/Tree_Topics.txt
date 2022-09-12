@@ -45,3 +45,89 @@
 2) Define Empty Tree.
 3) Check BST is Empty.
 4) Make Node Class.
+
+ 3) Insert Node in BST :
+ 1) Understand Logic.
+ 2) Add root node.
+ 3) Add left node.
+ 4) Add right node.
+
+ 4) Search Node in BST :
+ 1) Understand Logic.
+ 2) Make Search Function.
+ 3) Match Node with the given code.
+ 4) Test Search node logic.
+
+ 5) Depth First Search (DFS) in Tree :
+ 1) Traversing Tree :
+   ->  visit each node.
+
+   Approach :
+ 2) PreOrder : Rt-L-L-R R-L-R
+   ->
+                  (20)
+                /      \
+  left node   (10)     (30)    right node
+              /   \    /   \
+            (5)  (11)  (23)  (40)
+
+   output : 20,10,5,11,30,23,40
+
+ 3) InOrder :  depth - L-Rt-R-Rt- depth - L-Rt-R 
+   ->
+                  (20)
+                /      \
+  left node   (10)     (30)    right node
+              /   \    /   \
+            (5)  (11)  (23)  (40)
+
+   output : 5,10,11,20,23,30,40
+
+ 4) PostOrder : depth L-R-Rt    depth L-R-Rt   main Root
+   ->
+                  (20)
+                /      \
+  left node   (10)     (30)    right node
+              /   \    /   \
+            (5)  (11)  (23)  (40)
+
+   output : 5,11,10,23,40,30,20
+   
+ 5) Write Code.
+ 6) Test Flow.
+
+6) Breadth First Search (BFS) in Tree :
+1) How it Working : 
+  -> Traverse Level-by-level.
+
+2) Write Program.
+3) Test Flow.
+
+->  
+                  (20)     -> level 1
+                /      \
+  left node   (10)     (30)    right node  -> level 2
+              /   \    /   \
+            (5)  (11)  (23)  (40)    ->  level 3
+
+      Take Queue : 
+      Travsersing :
+      [20] -> 20 out
+      [10,30] -> 10 out
+      [30,5,11,23,40] -> 30 out
+      [5,11,23,40] -> 5 out
+      [11,23,40] -> 11 out
+      [23,40] -> 23 out
+      [40] -> 40 out
+
+-> Output : 20,10,30,5,11,23,40
+
+
+ 7) Min and Max in Binary Search Tree :
+ 1) Understand Logic.
+ 2) Write Code for Find Min Value. 
+  -> Left most node.
+ 3) Write Code for Find Max Value.
+  -> Right most node.
+  -> Right most node.
+ 4) Check Result.
