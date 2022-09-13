@@ -12,6 +12,15 @@ Call , Apply , Bind In Javascript :
 6) Interview Questions ?
 
 
-call => we can pass any type of params i.e. string , array, object,boolean,etc.
-apply => only pass only array type of params as a second argument.
-bind => use when needed.
+call =>
+      1) It is call function borrowing.
+      2) we can pass any type of params i.e. string , array, object,boolean,etc.
+
+apply => 
+       1) pass argument as a arrayList.
+       2) only pass only array type of params as a second argument.
+
+bind =>
+       1) using bind() we can create copy of our function and according to need we invoked it later. 
+          not directly called first create copy. 
+       2) use when needed.
