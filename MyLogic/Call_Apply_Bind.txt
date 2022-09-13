@@ -1,0 +1,17 @@
+Call , Apply , Bind In Javascript :
+
+1) Understand Use of Call , Apply , Bind.
+   ->  jab bhi object ke sath apko function ko attach krna hai function
+       reuse kr pao feature use kr pao  then use call, apply, bind.
+   ->  to reuse function in object.
+
+2) Why we can make a Simple Function ?
+3) Different in all of these ?
+4) What is special in Bind ?
+5) Carry These functions output ?
+6) Interview Questions ?
+
+
+call => we can pass any type of params i.e. string , array, object,boolean,etc.
+apply => only pass only array type of params as a second argument.
+bind => use when needed.

@@ -603,3 +603,14 @@ sequence :
   -> Right most node.
   -> Right most node.
  4) Check Result.
+
+
+ ********** Asymptotic analysis and Notation ********
+ 54)  Asymptotic analysis and Notation :
+  1) f(n) = 5n**2 + 6n + 12
+  2) What is Asymptotic Analysis ?
+  3) How to calculate Time Complexity.
+  4) Asymptotic Notations.
+
+  * number of line execute => Time Complexity
+  * variables, space => Space Complexity

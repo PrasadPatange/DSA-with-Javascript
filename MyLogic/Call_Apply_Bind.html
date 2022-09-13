@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Call , Apply, Bind in Javascript</title>
+    <script>
+     let student = {
+        firstName : "Prasad",
+        lastName : "Patange",
+        age : 23,
+        // getEmail : function(){
+        //     return `${this.firstName}.${this.lastName}@text.com`
+        // }
+     }
+     let teacher = {
+        firstName : "Gajanan",
+        lastName : "Patange",
+        age : 40,
+        // getEmail : function(){
+        //     return `${this.firstName}.${this.lastName}@text.com`
+        // }
+     }
+     //  console.log(student.getEmail.call(teacher));
+
+      function getEmail(){
+            // return `${this.firstName}.${this.lastName}@text.com`
+            // carry output :
+            return this.email = `${this.firstName}.${this.lastName}@text.com`
+
+        }
+      function chooseSubject(sub1,sub2){
+            // console.log(sub1,sub2);
+            // return [sub1,sub2];
+            // carry output :
+            return this.subject  = [sub1,sub2];
+        }
+
+        // call() =>
+        //  console.log(getEmail.call(student));
+        //  console.log(getEmail.call(teacher));
+
+        // apply() =>
+        //  console.log(getEmail.apply(teacher));
+
+        //  console.log(chooseSubject.call(teacher,'maths','english')); =>>> any type of params
+
+        //  to pass array then use apply() :
+        //  console.log(chooseSubject.apply(teacher,['maths','english']));    // =>>> only array type of params
+
+        // bind() => use kro jab jarurat ho
+        // console.log(getEmail.bind(teacher));
+        // console.log(getEmail.bind(teacher)());
+
+        // let callAnotherTime = getEmail.bind(teacher);
+        // code ...
+        // console.log(callAnotherTime());
+
+        // Carry Output =>
+        console.log(getEmail.call(teacher));
+        console.log(teacher);
+        // console.log(getEmail.call(student));
+        // console.log(student);
+
+        console.log(chooseSubject.apply(teacher,['maths','english']));
+        console.log(teacher);
+        
+        let callAnotherTime = getEmail.bind(teacher);
+        // code ...
+        console.log(callAnotherTime());
+        console.log(teacher);
+
+    </script>
+</head>
+<body>
+    <h1>Call , Apply, Bind in Javascript</h1>
+</body>
+</html>
