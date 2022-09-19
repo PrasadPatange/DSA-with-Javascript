@@ -146,7 +146,8 @@ Different Algorithm can be use for Options.
      
 14) Recursion Data Structre :-
      1) What is Recursion Data Structre.
-      -> Re Called Function (Khudko bar bar Call krna)
+      -> Re Called Function (Khudko bar bar Call krna).
+      ->Recursion is a process of calling itself. A function that calls itself is called a recursive function.
     Example :
    1) 
       funtion apple(){
