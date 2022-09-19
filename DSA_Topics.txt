@@ -150,14 +150,14 @@ Different Algorithm can be use for Options.
       ->Recursion is a process of calling itself. A function that calls itself is called a recursive function.
     Example :
    1) 
-      funtion apple(){
+      function apple(){
          ....
          ....
          apple();    //Infinite loop
       }
       apple();
     2)
-      funtion apple(){
+      function apple(){
          ....
          ....
          if(condition){
@@ -180,7 +180,7 @@ Example :-
       ->  Called Function inside Another Function
     Example :
             1) 
-               funtion apple(){
+               function apple(){
                   ....
                   ....
                   if(condition){
@@ -189,7 +189,7 @@ Example :-
                }
                apple();
             
-               funtion banana(){
+               function banana(){
                   ....
                   ....
                   if(condition){
