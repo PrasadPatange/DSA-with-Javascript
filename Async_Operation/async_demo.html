@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call back | promise | async await</title>
+</head>
+<body>
+    <h1>call back | promise | async await</h1>
+<script>
+// const arr = ['prasad','rohan'];
+// function get(){
+//     setTimeout(() => {
+//         let user = "";
+//         arr.map((name)=>{
+//            user += ` ${name}`;
+//         })
+//         console.log(user);
+//     }, 1000);
+// }
+
+// function create(newUser){
+//     setTimeout(()=>{
+//         arr.push(newUser);
+//     },2000)
+// }
+
+// get();
+// create('gajanan');
+
+// *****************************************
+
+// CallBack:
+// function create(newUser,callback){
+//     setTimeout(() => {
+//         arr.push(newUser);
+//         callback();
+//     }, 2000);
+// };
+
+// create('gajanan',get);
+// ******************************************
+
+// Promise:
+// function create(newUser){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(() => {
+//             arr.push(newUser);
+//             let error = false;
+//             if(!error){
+//                 resolve();
+//             }else{
+//                 reject("rejected...!!!")
+//             }
+//         }, 2000);
+//     })
+    
+// }
+
+// create('gajanan').then(get);
+// **************************************************
+// Handle Error in Catch Block :
+
+// function create(newUser){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(() => {
+//             arr.push(newUser);
+//             let error = true;
+//             if(!error){
+//                 resolve();
+//             }else{
+//                 reject("rejected...!!!")
+//             }
+//         }, 2000);
+//     })
+    
+// }
+
+// create('gajanan').then(get).catch(err => console.log(err));
+
+// *****************************************************
+
+// Async & Await:
+
+// function create(newUser){
+//     return new Promise((resolve,reject) =>{
+//         setTimeout(() => {
+//             arr.push(newUser);
+//             let error = false;
+//             if(!error){
+//                 resolve();
+//             }else{
+//                 reject("Rejected...!!!");
+//             }
+//         }, 2000);
+//     })
+// }
+
+// async function fulfill(){
+//     await create('gajanan');
+//           get();
+// }
+
+// fulfill();
+
+const arr = ['prasad','gajanan'];
+
+const get = () =>{
+    let users = [];
+    setTimeout(()=>{
+        arr.map((name) =>{
+            users.push(name);
+        })
+        console.log(users);
+    },1000)
+}
+
+const create = (newUser) =>{
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            arr.push(newUser);
+            let error = true;
+            if(!error){
+                resolve();
+            }else{
+                reject("Something Wrong..!!!");
+            }
+      },2000);
+    })
+   
+}
+// create('rohan')
+// .then(get)
+// .catch(err => console.log(err));
+
+const fulfill = async() =>{
+      await create('rohan');
+      get();
+}
+fulfill().catch(err=>console.log(err));
+
+</script>
+</body>
+</html>

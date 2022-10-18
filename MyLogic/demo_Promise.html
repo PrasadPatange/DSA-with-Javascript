@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        let person = {
+            name : "prasad",
+            last :" patange",
+            fullName : function(city,country){
+                return this.name + " " + this.last+ " " +"city : "+ city + " " +"country : "+country;
+            }
+        }
+        let person1 = {
+            name : "Gajanan",
+            last :" patange",
+    
+        }
+        console.log(person.fullName.call(person1,"virar","India"));
+        console.log(person.fullName.apply(person1,["virar","India"]));
+        
+        // Bind
+        let person2 = {
+            name : "Sayali",
+            last :" patange",
+            fullName : function(){
+                 console.log(this.name,this.last)
+            }
+        }
+        let display = person2.fullName.bind(person2);
+        // setTimeout(display, 3000);
+        // for example after 3 sec display fullName
+        setTimeout(display,3000);
+        // display();
+
+        console.log('Promise : ');
+let even = 2;
+
+const evenPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    if (even % 2 === 0) {
+      resolve(even);
+    } else {
+      reject(`${even} is Odd Number.`);
+    }
+  }, 3000);
+})
+  .then((data) => {
+    console.log(`${data} is Even Number.`);
+  })
+  .catch((err) => console.log(err));
+console.log(evenPromise);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
