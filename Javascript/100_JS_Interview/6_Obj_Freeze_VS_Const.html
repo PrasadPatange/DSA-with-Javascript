@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explain the difference between Object.freeze() VS Const?</title>
+</head>
+<body>
+    <h1>Explain the difference between Object.freeze() VS Const?</h1>
+
+    <script>
+
+        // const month = 'March';
+        // month = 'April';
+        // console.log(month);  // Give You Error : TypeError: Assignment to constant variable.
+
+        let person = {
+            name: "Prasad"
+        } 
+        // freeze means We can change the Value
+        Object.freeze(person);
+        person.name = "Gajanan";
+        console.log(person); // {name: 'Prasad'} : not update the value 
+
+    </script>
+</body>
+</html>

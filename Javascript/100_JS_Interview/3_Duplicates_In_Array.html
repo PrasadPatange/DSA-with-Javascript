@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to find Duplicate Elements in a Array?</title>
+</head>
+<body>
+    <h1>How to find Duplicate Elements in a Array?</h1>
+    <h2>
+        <ul>
+            <li>
+                To find Duplicate Elements in a Array, we can make use of the array filter method.
+            </li>
+            <li>
+                Then we check for the indexOf each element and return whichever does not match with the index.
+            </li>
+        </ul>
+    </h2>
+
+    <script>
+
+        const duplicatedArr = [10,22,10,32,21,5,34,50,10,50,5];
+        console.log("duplicatedArr => ",duplicatedArr)
+        const duplicates = duplicatedArr.filter((ele,index,arr) => arr.indexOf(ele) !== index);
+
+        console.log("duplicates => ",duplicates);
+    </script>
+</body>
+</html>

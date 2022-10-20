@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to find the count of duplicates in an array?</title>
+</head>
+<body>
+    <h1>How to find the count of duplicates in an array?</h1>
+
+    <script>
+
+        const months = ['May','April','March','May','Jun','April','Dec','Nov','Jun','July','May'];
+
+        const countDuplicates = months.reduce((obj,month) => {
+            if(obj[month] == undefined){
+                obj[month] = 1;
+                return obj;
+            }else{
+                obj[month]++;
+                return obj;
+            }
+        },{});
+        console.log(countDuplicates);
+    </script>
+</body>
+</html>

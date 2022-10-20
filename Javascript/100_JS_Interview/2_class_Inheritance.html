@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to implement class Inheritance in Javascript?</title>
+</head>
+<body>
+    <h1>How to implement class Inheritance in Javascript?</h1>
+     <h2>
+        <ul>
+            <li>
+                A class can be extended by another class, and the new class will be inherit all of its parent class methods.
+            </li>
+            <li>
+                The Object that Initializes the child class will then be able to use methods from both classes.
+            </li>
+        </ul>
+     </h2>
+
+    <script>
+     
+    //  Parent class
+     class Car {
+        constructor(model,name){
+            this.model = model;
+            this.name = name;
+        }
+
+        start(){
+            console.log(this.name);
+        }
+
+        end(){
+            console.log('Car Stopped');
+        }
+     }
+
+    //  Child class
+    // extends : keyword use to Inherit Parent Class
+    class ElectricCar extends Car {
+        
+        dashboard(){
+            console.log("Child Method");
+        }
+        start(){
+            // super : keyword use to call or access parent class methods.
+            super.start();
+            super.end();
+            // this : keyword use to call or access own class methods.
+            this.dashboard();
+        }
+    }
+
+    evCar = new ElectricCar('A20','Tesla');
+    evCar.start();
+    console.log(evCar);
+
+    </script>
+</body>
+</html>

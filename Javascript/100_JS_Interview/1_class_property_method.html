@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOPS - How to define a class with properties and methods in Javacript?</title>
+</head>
+<body>
+    <h1>OOPS - How to define a class with properties and methods in Javacript?</h1>
+    <h2> Class => A class declared with a name which acts as its identifier. <br>
+        We can use the name to create new objects using the keyword new. <br>
+        constructor()  => In Class , It is a method which gets intialized , when you create a new object.
+    </h2>
+
+   <script>
+        
+        class Car {
+            constructor(model,name){
+                this.model = model;
+                this.name = name;
+            }
+
+            start(){
+                console.log(`Name of the car : ${this.name}`);
+                console.log(`Model Number of the car : ${this.model}`);
+            }
+        }
+
+        bmw = new Car(620,'Sports Edition');
+        bmw.start();
+        console.log(bmw);
+
+   </script>
+</body>
+</html>
