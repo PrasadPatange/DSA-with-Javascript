@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>How to find unique values in array?</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>How to find unique valsues in array?</h1>
-    <h2>To find unique values in an array we are going to use the array filter() method and check if the value is present using indexOf() method.</h2>
+    <h2>
+      To find unique values in an array we are going to use the array filter()
+      method and check if the value is present using indexOf() method.
+    </h2>
 
     <script>
+      const Ids = [10, 20, 22, 11, 10, 50, 22, 30, 50];
 
-        const Ids = [10,20,22,11,10,50,22,30,50];
-        
-        console.log(Ids);
+      console.log(Ids);
 
-        const uniqueValues = Ids.filter((ele,index,arr) => arr.indexOf(ele) == index);
-        
-        console.log(uniqueValues);
-        
+      const uniqueValues = Ids.filter((ele, index, arr) => arr.indexOf(ele) == index);
+
+      console.log(uniqueValues);
     </script>
-</body>
-</html>
+  </body>
 </html>
