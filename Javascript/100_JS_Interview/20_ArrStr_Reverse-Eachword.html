@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Given an Array of Strings, reverse each Word in the Sentence?</title>
+</head>
+<body>
+    <h1>Given an Array of Strings, reverse each Word in the Sentence?</h1>
+    <h2>
+        We will use of the string reverse(), split() and join() to reverse each word in the sentence?
+    </h2>
+    <script>
+         
+      const str = "Welcome Prasad";
+      console.log(str);
+
+      const reverseStr = reverseStrBySeparator(str,"");
+
+      function reverseStrBySeparator(string,separator){
+        // console.log(string.split(separator));
+        // console.log(string.split(separator).reverse());
+        // console.log(string.split(separator).reverse().join(separator));
+
+        return string.split(separator).reverse().join(separator);
+        
+      }
+
+      console.log(reverseStr); // dasarP emocleW
+    </script>
+</body>
+</html>

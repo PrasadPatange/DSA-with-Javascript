@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How can you extract a few fields from the given JSON Object and form a new Array?</title>
+</head>
+<body>
+    <h1>How can you extract a few fields from the given JSON Object and form a new Array?</h1>
+    <h2>
+        We will need to use the map() method, we will pass the element and then return only the required key from that element
+    </h2>
+
+    <script>
+
+        const input = {
+            "students" : [
+                {
+                    name: "Prasad",
+                    id: 10,
+                    email:"prasad@gmail.com"
+                },
+                {
+                    name: "Gajanan",
+                    id: 20,
+                    email:"gajanan@gmail.com"
+                },
+                {
+                    name: "Rohan",
+                    id: 30,
+                    email:"rohan@gmail.com"
+                }
+            ]
+        }
+        console.log(input);
+
+        const output = input.students.map((item) => {
+
+            let studObj = {
+                name: item.name + item.id, //manipulate
+                email: item.email
+            }
+            
+            return studObj;
+            // return item.name;
+        });
+
+        console.log(output);
+
+    </script>
+</body>
+</html>

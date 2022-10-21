@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to find unique values from an Array in Sorted Order?</title>
+</head>
+<body>
+    <h1>How to find unique values from an Array in Sorted Order?</h1>
+    <h2>
+        We will be using the array filter() method first and check if the element is <br>
+        present using the indexOf() method and then we will use the sort() method to sort the array elements.
+    </h2>
+    <script>
+        const  Ids = [10,11,10,20,30,20,12,9,33];
+        console.log(Ids);
+        const sortedUniqueValues = Ids.filter((ele,index,arr) => arr.indexOf(ele) == index);
+        
+        sortedUniqueValues.sort((a,b) => {
+            return a - b;
+        })
+        console.log(sortedUniqueValues);
+
+    </script>
+</body>
+</html>

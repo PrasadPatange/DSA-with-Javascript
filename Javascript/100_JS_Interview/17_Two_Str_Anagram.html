@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Givem two strings, How can you check if the strings are anagram for each other?</title>
+</head>
+<body>
+    <h1>Givem two strings, How can you check if the strings are anagram for each other?</h1>
+    <h2>
+        Anagram : a word, phrase, or name formed by rearranging the letters of another, such as cinema, formed from iceman.
+        <br><br>
+        To check if the given strings are anagram or not, we will implement a custom method and write the logic as given below.
+        <ul>
+            <li>
+                First we will make them lowercase.
+            </li>
+            <li>
+                Then we will sort the strings.
+            </li>
+            <li>
+                And finally we will join them back.
+            </li>
+            <li>
+                The only thing then pending will be to compare the strings.
+            </li>
+        </ul>
+    </h2>
+
+    <script>
+        
+        const string1 = "Mary";
+        const string2 = "Army";
+
+        function checkAnagram(string1,string2){
+            var a = string1.toLowerCase();
+            var b = string2.toLowerCase();
+            // console.log(a);
+            // console.log(b);
+            // console.log(a.split(""));
+            // console.log(a.split("").sort());
+            // console.log(a.split("").sort().join(""));
+            // console.log(b.split(""));
+            // console.log(b.split("").sort());
+            // console.log(b.split("").sort().join(""));
+             a = a.split("").sort().join("");
+             b = b.split("").sort().join("");
+            return a === b;
+
+
+        }
+        console.log(checkAnagram(string1,string2)); // true
+        
+    </script>
+</body>
+</html>

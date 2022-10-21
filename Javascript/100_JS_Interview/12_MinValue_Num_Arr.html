@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Find Minimum Value in a Numbered Array?</title>
+</head>
+<body>
+    <h1>How to Find Minimum Value in a Numbered Array?</h1>
+    <h2>
+        <ul>
+            <li>
+                To find Minimum value in a numbered array, we are implementing a method which will find Minimum Value.
+            </li>
+            <li>
+                Inside this method, we are making use of the Array reduce() method and for each element, <br>
+                we will check if the value is Less than the previous one.
+            </li>
+        </ul>
+    </h2>
+
+    <script>
+        const numberArr = [15,34,45,54,65,11,23,12,72,18,100,83,5];
+        console.log(numberArr);
+
+        function findMinValue(arr){
+            return arr.reduce((prev,curr) => {
+                return prev < curr ? prev : curr;
+            });
+        }
+
+        console.log(findMinValue(numberArr));
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter a given object based on centain conditions and return the corresponding object?</title>
+</head>
+<body>
+    <h1>Filter a given object based on centain conditions and return the corresponding object?</h1>
+    
+    <script>
+
+        const input = {
+            "students" : [
+                     {
+                        "id" : 3,
+                        "firstName" : "Prasad",
+                        "lastName" : "Patange"
+                     },
+                     {
+                        "id" : 10,
+                        "firstName" : "Rohan",
+                        "lastName" : "Patil"
+                     }
+            ]
+        }
+        console.log(input);
+
+        const output = input.students.filter((item) => {
+                return item.id > 5 ? item : '';
+        });
+        console.log(output);
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How can you Uppercase the First Character in a String Array?</title>
+</head>
+<body>
+    <h1>How can you Uppercase the First Character in a String Array?</h1>
+    <h2>
+        <ul>
+            <li>
+                To capitalize the first character of every element in array, we will have to get the first character using charAt() method.  
+            </li>
+            <li>
+                And the Apply toUpperCase and finally we will concatenate all the other characters using substr(1). 
+            </li>
+        </ul>
+    </h2>
+
+    <script>
+        const days = ['sunday','monday','tuesday','wednesday','thursday','friday','satureday'];
+        console.log(days);
+
+        let updatedDays = [];
+
+        for(let day of days){
+            // console.log(day.charAt(0).toUpperCase());
+            // console.log(day.substring(1));
+            // console.log(day.charAt(0).toUpperCase() + day.substring(1))
+            day = day.charAt(0).toUpperCase() + day.substring(1);
+            // console.log(day);
+            updatedDays.push(day);
+        }
+
+        console.log(updatedDays);
+        
+    </script>
+</body>
+</html>

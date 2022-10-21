@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to find the Average of the numbers in the numbered Array?</title>
+</head>
+<body>
+    <h1>How to find the Average of the numbers in the numbered Array?</h1>
+    <h2>
+        <ul>
+            <li>
+                Using the array reduce() method , we will get the total count first, and then will get the total length of the Array.
+            </li>
+            <li>
+                Divide the total sum with the length of the array and we get the average of the numbers in an Array.
+            </li>
+        </ul>
+    </h2>
+
+    <script>
+        const Ids = [10,22,6,23,45,65,76,11,12];
+        console.log(Ids);
+
+        const totalCount = Ids.reduce((a,b) => a + b ,0);
+        console.log(totalCount); //270
+
+        const arrLength = Ids.length;
+        console.log(arrLength); //9
+
+        console.log(totalCount/arrLength); //30
+
+    </script>
+</body>
+</html>
