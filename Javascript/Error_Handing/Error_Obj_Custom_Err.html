@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Error Object And Custom Errors In Javascript.</title>
+</head>
+<body>
+    <h1>The Error Object And Custom Errors In Javascript.</h1>
+    <h2>For All Build In Errors, the error object has two main properties.
+        <br> 1) name <br>
+        2) message
+    </h2>
+
+    <script>
+        try{
+            prasad
+        }
+        catch(error){
+            console.log("Error Name: ",error.name); //ReferenceError
+            console.log("Error Message: ",error.message); //prasad is not defined
+        }
+
+        // custom Error: 
+        try{
+            // throw new Error("Prasad is not good"); // Error
+            // throw new ReferenceError("Prasad is not good"); // ReferenceError
+            // console.log(prasad);
+            throw new ReferenceError("Prasad is not good"); // ReferenceError
+        }
+        catch(error){
+          console.log("custom error name: ",error.name)
+          console.log("custom error message: ",error.message)
+          console.log("custom error message: ",error.stack) // custom error message:  ReferenceError: prasad is not define
+        }
+
+        // ----------------------------------------------------
+        // Example : 
+        console.log("*******************************");
+        try {
+            let age = prompt("Enter Your Age : ");
+            age = Number.parseInt(age);
+            if(age > 150){
+                throw new ReferenceError("This is Probably not true");
+            }
+        } catch (error) {
+            console.log("Age Error name: ", error.name);
+            console.log("Age Error name: ", error.message);
+        }
+
+        console.log("Script is still running...");
+    </script>
+</body>
+</html>

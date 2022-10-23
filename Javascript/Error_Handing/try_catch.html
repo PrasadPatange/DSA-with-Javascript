@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>try catch</title> 
+</head>
+<body>
+    <h1>Try and Catch</h1>
+    <h2> Due to Error code excution will be stop to handle this problem we use try and catch block. </h2>
+    <script>
+         setTimeout(() => {
+             console.log("Hacking wifi....Please Wait....");
+         }, 1000);
+
+        //  console.log(prasad); // Uncaught ReferenceError: prasad is not defined.
+
+        //  try catch only handle synchronous code.
+        //  try{
+        //      console.log(prasad);
+        //  }
+        //  catch(err){
+        //     console.log("Error : ",err); //handle error here
+        //  }
+        //    -----------------------------------------------------------------
+        // if code is schdule it will throw error
+         try{
+            setTimeout(() => {
+                // console.log(prasad); //Uncaught ReferenceError: prasad is not defined
+                try {
+                    console.log(prasad); //it will handle
+                } catch (error) {
+                    console.log("Error in Try : ",error); //it will handle
+                }
+            }, 100);
+         }
+         catch(err){
+            console.log("Error : ",err); //handle error here
+         }
+
+         setTimeout(() => {
+             console.log("Fetching username and password....Please Wait....");
+            //  console.log(prasad);
+         }, 2000);
+
+         setTimeout(() => {
+             console.log("Hacking Prasad's facebook Id....Please Wait....");
+         }, 3000);
+
+         setTimeout(() => {
+             console.log("Username and Password of prasad (5887755558) is fetch....Please Wait....");
+         }, 4000);
+        
+
+    </script>
+</body>
+</html>
