@@ -27,7 +27,7 @@ console.log(arr);
 console.log(arr.unshift(10));
 console.log(arr);
 
-// slice() : add/remove from any position of array :
+// splice() : add/remove from any position of array :
 console.log(arr.splice(2,0,30));
 console.log(arr);
 console.log(arr.splice(4,1));
