@@ -1,0 +1,171 @@
+<!-- 
+
+1. Lexical Scope :
+    We can access outer value/property inside inner function 
+    but not access inner value/property of that function to outer /outside is called lexical scope.
+
+2. Closure :
+  - A function with lexical scope is known as closure. 
+  - A closure is the combination of a function and the lexical environment within which that function was declared.
+
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closure</title>
+  </head>
+  <body>
+    <script>
+      // ***** Lexical Scope : *****
+
+      // let data = 10;
+      // function test(){
+      //     let a = 100;
+      //     console.log("outer : ",data);
+      // }
+      // console.log("inner : ",a);  // throw error : Uncaught ReferenceError: a is not defined
+      // test();
+
+      // ***** Closure *****
+
+      // 1 . Step 1 : =>
+      // function test(){
+      //     let a = 100;
+      //     function inner(){
+      //         console.log(a);
+      //     }
+      //     inner();
+      // }
+
+      // test();
+
+      //  -------------------------------------------------------------------------------
+      // 2. Step 2 : =>
+
+      // function test(){
+      //     let a = 100;
+      //     function inner(){
+      //         return a;
+      //     }
+      //     console.log(inner());
+      // }
+
+      // test();
+
+      //  -------------------------------------------------------------------------------
+      // 3. Step 3 : =>
+
+      //   function test(){
+      //       let a = 100;
+      //       return function inner(){
+      //           return a;
+      //       }
+      //   }
+
+      //   // console.log(a); // Throw Error :  Uncaught ReferenceError: a is not defined
+
+      //   console.log(test());
+      /*
+        It will Return inner function :
+        ƒ inner(){
+            return a;
+        }
+        */
+
+      //  -------------------------------------------------------------------------------
+      // 4. Step 4 : =>
+
+      //   function test() {
+      //     let a = 100;
+      //     return function inner() {
+      //       return a;
+      //     };
+      //   }
+      //   let inner = test();   // scope khatam hua test() ka
+
+      //   console.dir(inner);  // inner remember value of a
+
+      /*
+    ƒ inner()
+    ƒ inner()
+    ƒ ()
+    [[Scopes]]
+    : 
+    Scopes[3]
+    0: Closure (test) a: 100
+    */
+
+      //  -------------------------------------------------------------------------------
+      // 5. Step 5 : =>
+
+      //     function test() {
+      //     let a = 100;
+      //     return function inner() {
+      //       return a;
+      //     };
+      //   }
+      //     let inner = test();
+      //   console.log(inner()); // 100 yad rakha inner ne a = 100
+
+      //  -------------------------------------------------------------------------------
+      // 6. Step 6 : => one more example
+      //   function outer() {
+      //     return function test() {
+      //       let a = 100;
+      //       return function inner() {
+      //         return a;
+      //       };
+      //     }
+      //   }
+      //   let test = outer();
+      //   let inner = test();
+      //   console.log(inner()); // 100 yad rakha inner ne a = 100
+
+      //  -------------------------------------------------------------------------------
+      // 7. Step 7 : => Example of Multiple Closure
+    //   function outer() {
+    //     let outerValue = 5;
+    //     return function test() {
+    //       let a = 100;
+    //       return function inner() {
+    //         return a * outerValue;
+    //       };
+    //     };
+    //   }
+    //   let test = outer();
+    //   let inner = test();
+
+    //   console.dir(inner);
+      // Multiple Closure :
+      /*
+       ƒ inner()
+        ƒ ()
+        [[Scopes]]: Scopes[4]
+        0: Closure (test) {a: 100}
+        1: Closure (outer) {outerValue: 5}
+      */
+
+
+    //   console.log(inner());  // 500
+
+    //  -------------------------------------------------------------------------------
+      // 8. Step 8 : => Interview Quesition
+
+          function test() {
+          let a = 5; // 1st take
+          let fun =  function inner() {
+              a = 10; // 3rd Update
+            return a*a;
+          };
+          a = 20; // 2nd Update
+          return fun;
+        }
+          let inner = test();
+        console.log(inner());  // 10*10 = 100
+
+    </script>
+  </body>
+</html>

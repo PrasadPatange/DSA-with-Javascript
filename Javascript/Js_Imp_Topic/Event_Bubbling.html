@@ -1,0 +1,92 @@
+<!--
+     Event Bubbling :  ( Bottom To Top Approach ) inner then outer
+- The Event bubbling in JavaScript is a type of event propagation. The event triggers the innermost target element and
+  consecutively triggers the parent element of the target element in the same hierarchy until it triggers
+  the outermost element.
+ 
+- Event bubbling is a method of event propagation in the HTML DOM API when an event is in an element inside another element, 
+  and both elements have registered a handle to that event. It is a process that starts with the element that triggered the event and then bubbles up to the containing elements in the hierarchy. In event bubbling,
+  the event is first captured and handled by the innermost element and then propagated to outer elements. 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Bubbling</title>
+
+    <style>
+      .topDiv {
+        background-color: coral;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      .middleDiv {
+        background-color: yellow;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      .innerDiv {
+        background-color: aqua;
+        padding: 10px;
+        border-radius: 10px;
+      }
+    </style>
+  
+  </head>
+
+  <body>
+    <br>
+    <h1>Event Bubbling</h1>
+    <br>
+    <br>
+    <!-- <div onclick="topDiv()" class="topDiv"> -->
+    <div  class="topDiv" id="topDiv">
+      <h4>TopDiv</h4>
+
+      <!-- <div onclick="middleDiv()" class="middleDiv"> -->
+      <div  class="middleDiv" id="middleDiv">
+        <h4>MiddleDiv</h4>
+
+        <!-- <div onclick="innerDiv()" class="innerDiv"> -->
+        <div  class="innerDiv" id="innerDiv">
+          <h4>InnerDiv</h4>
+        </div>
+
+      </div>
+
+    </div>
+
+
+      <script>
+
+      const TopDiv = document.getElementById('topDiv');
+      const MiddleDiv = document.getElementById('middleDiv');
+      const InnerDiv = document.getElementById('innerDiv');
+
+      function topDiv() {
+        alert("1. Top Div");
+        console.log("1. Top Div");
+      }
+      function middleDiv() {
+        // event.stopPropagation(); 
+        alert("2. Middle Div");
+        console.log("2. Middle Div");
+      }
+      function innerDiv() {
+        // event.stopPropagation(); // use to stop event propagation or bubbling.
+        alert("3. Inner Div");
+        console.log("3. Inner Div");
+      }
+        TopDiv.addEventListener('click', topDiv,false);
+        MiddleDiv.addEventListener('click', middleDiv,false);
+        InnerDiv.addEventListener('click', innerDiv,false);
+
+        // For Event Bubbling : (Bottom to Top ) Property of addEventListener('click',fun,false); must be "false".
+
+
+    </script>
+  </body>
+</html>

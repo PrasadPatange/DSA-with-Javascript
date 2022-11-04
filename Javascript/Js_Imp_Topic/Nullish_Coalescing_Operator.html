@@ -1,0 +1,35 @@
+<!-- 
+ Nullish Coalescing Operator : 
+ - represent using '??'
+ - It only checks undefined and null property. not check boolean,empty string,etc.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nullish Coalescing Operator</title>
+</head>
+<body>
+    <h1>Nullish Coalescing Operator</h1>
+    <script>
+        let users = {
+            student: {
+                // name:"prasad",
+                // age: 23
+                name:"",
+                age: 0
+            }
+        }
+        // console.log(users.student.name || 'unknown');
+        // console.log(users.student.age  || 21);
+
+        // Nullish Coalescing Operator : ??
+        console.log(users.student.name ?? 'unknown');  // empty
+        console.log(users.student.age  ?? 21);  // 0
+        
+        // only checks undefined and null property
+    </script>
+</body>
+</html>

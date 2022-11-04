@@ -1,0 +1,84 @@
+<!-- 
+    Event Capturing :  ( Top To Bottom Approach ) : outer then inner
+     - The Event Capturing in JavaScript is a type of event propagation.same as Event Bubbling but Opposite.
+       i.e. first parent then child.
+
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Capturing </title>
+</head>
+<style>
+    #topDiv {
+      background-color: coral;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    #middleDiv {
+      background-color: yellow;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    #innerDiv {
+      background-color: aqua;
+      padding: 10px;
+      border-radius: 10px;
+    }
+  </style>
+
+</head>
+
+<body>
+    <br>
+    <h1>Event Capturing</h1>
+    <br>
+    <br>
+  <div id="topDiv">
+    <h4>TopDiv</h4>
+
+    <div id="middleDiv">
+      <h4>MiddleDiv</h4>
+
+      <div id="innerDiv">
+        <h4>InnerDiv</h4>
+      </div>
+
+    </div>
+
+  </div>
+
+
+    <script>
+
+    const TopDiv = document.getElementById('topDiv');
+    const MiddleDiv = document.getElementById('middleDiv');
+    const InnerDiv = document.getElementById('innerDiv');
+
+    function topDiv() {
+      alert("1. Top Div");
+      console.log("1. Top Div");
+    }
+    function middleDiv() {
+      // event.stopPropagation(); 
+      alert("2. Middle Div");
+      console.log("2. Middle Div");
+    }
+    function innerDiv() {
+      // event.stopPropagation(); // use to stop event propagation or bubbling.
+      alert("3. Inner Div");
+      console.log("3. Inner Div");
+    }
+      TopDiv.addEventListener('click', topDiv,true);
+      MiddleDiv.addEventListener('click', middleDiv,true);
+      InnerDiv.addEventListener('click', innerDiv,true);
+
+      // For Event Bubbling : (Bottom to Top ) Property of addEventListener('click',fun,true); must be "true".
+
+
+  </script>
+</body>
+</html>

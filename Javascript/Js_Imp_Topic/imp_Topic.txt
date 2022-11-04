@@ -25,8 +25,46 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript
  Lexical scope is sometimes also referred to as static scope.
 
 7. Closure : 
+- A function with lexical scope is known as closure. 
+
 - A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment).
 In other words, a closure gives you access to an outer function's scope from an inner function. 
 In JavaScript, closures are created every time a function is created, at function creation time.
 
 - A closure is the combination of a function and the lexical environment within which that function was declared. 
+
+Important for closure :
+
+
+Lexical Scope :
+ - function ki outer value function ke andar access ho sakti hai,
+   but function ki inner value function ke bahar access nahi hot sakti. 
+ - We can access outer value/property inside inner function 
+   but not access inner value/property of that function to outer /outside is called lexical scope.
+
+   example :
+   let data = 10;
+        function test(){
+            let a = 100;
+            console.log("outer : ",data);
+        }
+        console.log("inner : ",a);  // throw error : Uncaught ReferenceError: a is not defined
+        test();
+
+
+
+8. Event Bubbling :  ( Bottom To Top Approach ) : inner then outer
+  - The Event bubbling in JavaScript is a type of event propagation. The event triggers the innermost target element and
+   consecutively triggers the parent element of the target element in the same hierarchy until it triggers the outermost element.
+
+  - Event bubbling is a method of event propagation in the HTML DOM API when an event is in an element inside another element, 
+   and both elements have registered a handle to that event. It is a process that starts with the element that triggered the event and then bubbles up to the containing elements in the hierarchy. In event bubbling,
+    the event is first captured and handled by the innermost element and then propagated to outer elements.
+
+9. Event Capturing :  ( Top To Bottom Approach ) : outer then inner
+  - The Event Capturing in JavaScript is a type of event propagation.same as Event Bubbling but Opposite.
+    i.e. first parent then child.
+
+10. Nullish Coalescing Operator : 
+ - represent using '??'
+ - It only checks undefined and null property. not check boolean,empty string,etc.
