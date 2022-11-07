@@ -51,9 +51,14 @@ Lexical Scope :
         console.log("inner : ",a);  // throw error : Uncaught ReferenceError: a is not defined
         test();
 
+8. Event propagation :
+    Propagation refers to how events travel through the Document Object Model (DOM) tree. 
+    The DOM tree is the structure which contains parent/child/sibling elements in relation to each other. 
+    You can think of propagation as electricity running through a wire, until it reaches its destination.
+    The event needs to pass through every node on the DOM until it reaches the end, or if it is forcibly stopped.
+   
 
-
-8. Event Bubbling :  ( Bottom To Top Approach ) : inner then outer
+9. Event Bubbling :  ( Bottom To Top Approach ) : inner then outer
   - The Event bubbling in JavaScript is a type of event propagation. The event triggers the innermost target element and
    consecutively triggers the parent element of the target element in the same hierarchy until it triggers the outermost element.
 
@@ -61,10 +66,10 @@ Lexical Scope :
    and both elements have registered a handle to that event. It is a process that starts with the element that triggered the event and then bubbles up to the containing elements in the hierarchy. In event bubbling,
     the event is first captured and handled by the innermost element and then propagated to outer elements.
 
-9. Event Capturing :  ( Top To Bottom Approach ) : outer then inner
+10. Event Capturing :  ( Top To Bottom Approach ) : outer then inner
   - The Event Capturing in JavaScript is a type of event propagation.same as Event Bubbling but Opposite.
     i.e. first parent then child.
 
-10. Nullish Coalescing Operator : 
+11. Nullish Coalescing Operator : 
  - represent using '??'
  - It only checks undefined and null property. not check boolean,empty string,etc.
