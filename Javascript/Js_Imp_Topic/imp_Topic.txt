@@ -73,3 +73,8 @@ Lexical Scope :
 11. Nullish Coalescing Operator : 
  - represent using '??'
  - It only checks undefined and null property. not check boolean,empty string,etc.
+
+12. What is currying in JavaScript used for?
+  - Currying is a checking method to make sure that you get everything you need before you proceed. 
+  - It helps you to avoid passing the same variable again and again. It divides your function into multiple 
+    smaller functions that can handle one responsibility.

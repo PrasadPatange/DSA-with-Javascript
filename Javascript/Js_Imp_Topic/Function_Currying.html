@@ -1,0 +1,159 @@
+<!-- 
+    
+What is currying in JavaScript used for?
+Currying is a checking method to make sure that you get everything you need before you proceed. 
+It helps you to avoid passing the same variable again and again. It divides your function into multiple 
+smaller functions that can handle one responsibility.
+
+What is currying explain with example?
+Currying is when you break down a function that takes multiple arguments into a series of 
+functions that each take only one argument.
+Here's an example in JavaScript:
+ function add (a, b) { 
+return a + b; 
+} 
+add(3, 4); // returns 7. 
+This is a function that takes two arguments, a and b, and returns their sum.
+
+function calVolume(l, b, h) {
+  return l * b * h;
+}
+
+console.log('Volume : ', calVolume(2, 3, 4));
+
+function calVolume(l) {
+  return function (b) {
+    return function (h) {
+      return l * b * h;
+    };
+  };
+}
+
+console.log(calVolume(2)(3)(4));
+
+function sum(a) {
+  return function (b) {
+      return a + b;
+  };
+}
+console.log('sum is  : ', sum(2)(3));
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closure</title>
+  </head>
+  <body>
+    <script>
+        
+
+// Normal Method
+function add(a, b, c) {
+  return a + b + c;
+}
+
+let result = add(2, 3, 4);
+console.log(result);
+
+// Advanced JS => Function Currying  with the help of closure
+
+// ex : 1
+function add(a) {
+  return function (b) {
+    return function (c) {
+      return a + b + c;
+    };
+  };
+}
+
+// let result = add(2);
+// let result1 = result(3);
+// console.log(result1(4));
+let addRes = add(4)(3)(2);
+console.log(addRes);
+
+// 1.
+// let result = add;
+// console.log(result);
+// output :
+// ƒ add(a) {
+//   return function (b) {
+//       return function (c) {
+//           return a + b + c;
+//       };
+//   };
+// }
+// 2.
+// let result = add(2);
+// console.log(result);
+// output :
+// ƒ (b) {
+//   return function (c) {
+//       return a + b + c;
+//   };
+// }
+// 3.
+// let result = add(2);
+// let result1 = result(3);
+// console.log(result1);
+// Output :
+// ƒ (c) {
+//   return a + b + c;
+// }
+// 4.
+// let result = add(2);
+// let result1 = result(3);
+// console.log(result1(4));
+// output :
+// 9
+
+
+// ex: 2  real time example
+let userObj = {
+  name: 'prasad',
+  age: 23,
+};
+
+function userInfo(obj) {
+  return function (userinfo) {
+    return obj[userinfo];
+  };
+}
+
+let userRes = userInfo(userObj);
+console.log(userRes('name'));
+//prasad
+
+// ex : 3
+// Infinite Currying in Javascript :
+
+// It Static example :
+// function addition(a) {
+//   return function (b) {
+//     return function (c) {
+//       return function () {
+//         return a + b + c ....;
+//       };
+//     };
+//   };
+// }
+// console.log(addition(2)(3)(4)() ....);
+
+// dynamic to resolve this problem :
+
+function addition(a) {
+  return function (b) {
+    if (b) return addition(a + b);
+    return a;
+  };
+}
+console.log(addition(2)(3)(4)(5)());
+// console.log(addition(2)(3)(4)(5)()......);
+
+    </script>
+  </body>
+</html>
