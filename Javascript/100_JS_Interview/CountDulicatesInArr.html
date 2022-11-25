@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Duplicates in Array</title>
+</head>
+<body>
+    <h1>Count Duplicates in Array : </h1>
+    <h2>Ex : const items = ['a','b','c','a','b','b','c','d']</h2>
+    <h2>Output : {a:2, b:3, c:2, d:1} </h2>
+    <script>
+       const items = ['a','b','c','a','b','b','c','d'];
+
+        function CountDuplicates(data){
+            const output = {};
+            data.map(d => {
+                   output[d] =  (output[d] | 0 ) + 1;
+            })
+            return output;
+        }
+        console.log(CountDuplicates(items))
+    </script>
+</body>
+</html>

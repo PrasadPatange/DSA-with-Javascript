@@ -78,3 +78,12 @@ Lexical Scope :
   - Currying is a checking method to make sure that you get everything you need before you proceed. 
   - It helps you to avoid passing the same variable again and again. It divides your function into multiple 
     smaller functions that can handle one responsibility.
+
+13. Pure Functinons are Predictable , Readable , Reusable , Testable.
+    What is Pure Functions ?
+    => Pure Function should always give you same output whenever pass the same Input.
+    => not depend on outer variable 
+    => pure function not use console.log because console is external api not js function.
+
+    What is Side Effect ?
+    => any Operation not directly related to final output of a function is called side effect.

@@ -45,11 +45,14 @@ console.log('sum is  : ', sum(2)(3));
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Closure</title>
+    <title>Function Currying</title>
   </head>
   <body>
+
+    <div>
+      <h1 id="header">Hello User</h1>
+    </div>
     <script>
-        
 
 // Normal Method
 function add(a, b, c) {
@@ -154,6 +157,72 @@ function addition(a) {
 console.log(addition(2)(3)(4)(5)());
 // console.log(addition(2)(3)(4)(5)()......);
 
-    </script>
-  </body>
+// Example :
+    // function sum(x){
+    //   return function(y){
+    //     return function(z){
+    //       return x+y+z;
+    //     }
+    //   }
+    // }
+
+    // Using Arrow Function :
+    // function sum(x){
+    //   return (y) => {
+    //     return (z) => {
+    //       return x+y+z;
+    //     }
+    //   }
+    // }
+
+    // Short Hand :
+    const sum = x => y => z => x+y+z;
+
+    console.log("Sum => ",sum(1)(2)(3));
+
+// Real Example :
+
+let users = {
+  firstName : "Prasad",
+  lastName : "Patange",
+  city : "Mumbai"
+}
+
+// Without Currying :
+// function getUserDetails(data, key){
+//   return data[key];
+// }
+
+// console.log("First Name : ",getUserDetails(users,'firstName'));
+// console.log("Last Name : ",getUserDetails(users,'lastName'));
+// console.log("City : ",getUserDetails(users,'city'));
+
+// With Currying :
+
+function getUserDetails(data){
+  return function(key){
+    return data[key]
+  }
+  // short hand :
+  // return key => data[key]
+}
+// console.log(getUserDetails(users)('firstName'))
+const userDetails = getUserDetails(users);
+console.log(userDetails('firstName'))
+console.log(userDetails('lastName'))
+console.log(userDetails('city'))
+
+// Example : with HTML
+
+const updateNode = function(id){
+  return function(content){
+    // return document.querySelector(`${id}`).textContent = content;
+    return document.getElementById(`${id}`).textContent = content;
+  }
+}
+
+const updateHeader = updateNode('header');
+updateHeader('Hello Prasad');
+</script>
+</body>
 </html>

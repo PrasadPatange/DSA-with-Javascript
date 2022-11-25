@@ -1,0 +1,44 @@
+<!-- 
+    Pure Functinons are Predictable , Readable , Reusable , Testable.
+    What is Pure Functions ?
+    => Pure Function should always give you same output whenever pass the same Input.
+    => not depend on outer variable 
+    => pure function not use console.log because console is external api not js function.
+
+    What is Side Effect ?
+    => any Operation not directly related to final output of a function is called side effect.
+
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pure Function</title>
+</head>
+<body>
+    <script>
+        //  Pure Function in Javascript :
+        const greeting = (name) => {
+            return `Hello ${name}`;
+        }
+         console.log(greeting('Prasad'));
+        //  In Above Function Same Input Same Output.
+
+         function pure(x,y){
+            return x*y;
+         }
+         console.log(pure(10,5));
+
+        //  Impure Function in Javascript :
+        let msg = "Good Morning";
+        const greet = (name) => {
+            return `${msg} ${name}`;
+        }
+        console.log(greet('Prasad'));
+        // Impure because funcion output depends on outer variable message.
+        
+    </script>
+</body>
+</html>
