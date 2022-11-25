@@ -38,7 +38,11 @@
         }
         console.log(greet('Prasad'));
         // Impure because funcion output depends on outer variable message.
-        
+        let a = 10;
+        function impuresum(b){
+            return a+b;
+        }
+        console.log(impuresum(20))
     </script>
 </body>
 </html>
