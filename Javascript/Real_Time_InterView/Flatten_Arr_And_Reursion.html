@@ -1,0 +1,42 @@
+<!-- 
+    Recursion : 
+    recursion is a process where functio call itself until it reach to the point where you get output. 
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flatten Array of Array and Recursion .</title>
+  </head>
+  <body>
+    <script>
+      //   Flatten Array of Array
+      // output : [1,2,3,4,5,6,7,8,9,10,11,12,13]
+
+      // Approach :
+      // 1) How Recursive functon  works
+      // 2) Array Methods
+
+      const arr = [1, 2, [3, 4, 5], 6, [7, 8, [9, 10, 11]], 12, 13];
+      // console.log(arr);
+      // let output = "";
+      let output = [];
+      function flatten(arr) {
+        for (let i = 0; i < arr.length; i++) {
+          if (Array.isArray(arr[i])) {
+            // recursive call
+            flatten(arr[i]); // recursion function
+          } else {
+            // output += arr[i];// for string
+            output.push(arr[i]); // for array
+          }
+        }
+        return output;
+      }
+      console.log(flatten(arr));
+    </script>
+  </body>
+</html>

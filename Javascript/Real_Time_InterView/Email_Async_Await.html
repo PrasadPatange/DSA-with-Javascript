@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interview Question - setTimeOut | Promise | Async await</title>
+  </head>
+  <body>
+    <h1>1) Send emails to multiple users .</h1>
+
+    <script>
+      //  2) Send emails to multiple users .
+      //  use case : setTimeout() | Promise | async await
+
+      const users = [
+        "prasad@gmail.com",
+        "gajanan@gmail.com",
+        "sayali@gmail.com",
+      ];
+
+      function delay(user) {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            resolve(`Email send To ${user}`);
+          }, 1000);
+        });
+      }
+
+      async function sendEmail() {
+        for (user of users) {
+          const confirmation = await delay(user);
+          console.log(confirmation);
+        }
+        console.log("Email Send to all users...");
+      }
+
+      sendEmail();
+    </script>
+  </body>
+</html>
