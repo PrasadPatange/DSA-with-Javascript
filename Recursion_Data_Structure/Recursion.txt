@@ -2,6 +2,7 @@
      1) What is Recursion Data Structre.
       -> Re Called Function (Khudko bar bar Call krna).
       ->Recursion is a process of calling itself. A function that calls itself is called a recursive function.
+      -> recursion is a process where function call itself until it reach to the point where you get output. 
     Example :
    1) 
       function apple(){

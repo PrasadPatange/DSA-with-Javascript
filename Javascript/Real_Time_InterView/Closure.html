@@ -1,0 +1,71 @@
+<!-- 
+    closure :
+    - In JavaScript, a Closure is a function that references variables in the outer scope from its inner scope.  
+    - The closure preserves the outer scope inside its inner scope even after outer function is returned.
+
+    - Closure is a function , when you create another function from function and inner function access all data of outer function
+      or parent function even after the outer function completed. or done with its execution. Its called Closure.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closure</title>
+    <style>
+      .selected {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1>Buy Product Count : <span id="count"></span></h1>
+
+    <ul>
+      <li class="item">Laptop</li>
+      <li class="item">Phone</li>
+      <li class="item">Chair</li>
+      <li class="item">Charger</li>
+    </ul>
+
+    <script>
+      let products = document.getElementsByClassName("item");
+      //   console.log(products);
+
+      //   Closure
+      let cartCounter = (function () {
+        let count = 0;
+        return {
+          increment: () => count++, //count += 1
+          decrement: () => count--, //count += 1
+          totalCount: () => count,
+        };
+      })();
+
+    //   Total Count :
+    function updateCart(){
+        document.getElementById('count').innerHTML = cartCounter.totalCount();
+        // console.log("Count : ",cartCounter.totalCount())
+    }
+    
+      for (let i = 0; i < products.length; i++) {
+        // console.log(products[i])
+        products[i].addEventListener("click", function () {
+        //   console.log(this.className.indexOf("selected"));
+          if (this.className.indexOf("selected") < 0) {
+            // if li not has class selected then indexOf return -1 < 0 : apply class there.
+            this.className = "selected";
+            cartCounter.increment();
+            updateCart();
+          } else {
+            this.className = this.className.replace("selected", "");
+            cartCounter.decrement();
+            updateCart();
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

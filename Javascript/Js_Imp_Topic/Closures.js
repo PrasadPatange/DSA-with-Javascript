@@ -6,6 +6,9 @@ Closure :
 In other words, a closure gives you access to an outer function's scope from an inner function. 
 In JavaScript, closures are created every time a function is created, at function creation time.
 
+- In JavaScript, a Closure is a function that references variables in the outer scope from its inner scope. 
+- The closure preserves the outer scope inside its inner scope even after outer function is returned.
+
 - A closure is the combination of a function and the lexical environment within which that function was declared. 
 
 */

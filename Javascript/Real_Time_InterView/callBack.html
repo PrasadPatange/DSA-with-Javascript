@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallBack</title>
+</head>
+<body>
+    <script>
+        // Sync Callback Function : 
+        // function sendNotification(){
+        //     console.log("Your Profile is Shortlisted for the interview.")
+        // }
+
+        // function ApplyForJob(callback){
+        //     console.log("Your resume has uploaded.");
+        //     console.log("Your request is in progress...");
+        //     callback();
+        // }
+        
+        // ApplyForJob(sendNotification);
+
+        // console.log("some other stuff in progress.")
+
+        // Async Callback function :
+        function sendNotification(){
+            setTimeout(()=>{
+                console.log("Your Profile is Shortlisted for the interview.")
+            },1000)
+        }
+
+        function ApplyForJob(callback){
+          setTimeout(()=>{
+            console.log("Your resume has uploaded.");
+            console.log("Your request is in progress...");
+            callback();
+          },3000);
+        }
+        
+        ApplyForJob(sendNotification);
+
+        // console.log("some other stuff in progress.")
+    </script>
+</body>
+</html>
