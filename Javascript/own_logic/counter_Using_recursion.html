@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter Using Recursion</title>
+  </head>
+  <body>
+    <h1>Counter Using Reursion</h1>
+    <script>
+      function counter(num) {
+        console.log(num);
+        let countNum = num - 1;
+        if (countNum > 0) {
+          counter(countNum);
+        }
+      }
+
+      let number = 5;
+      counter(number);
+    </script>
+  </body>
+</html>

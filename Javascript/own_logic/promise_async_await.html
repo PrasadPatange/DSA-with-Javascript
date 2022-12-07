@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise | Async Await</title>
+  </head>
+  <body>
+    <h1>Promise | Async Await Using Fetch()</h1>
+    <script>
+
+      // promise and async await :
+      let a = undefined;
+
+      let promiseData = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          a = "Hey I am Resolved";
+          resolve("done");
+        }, 3000);
+      });
+
+      promiseData.then((data) => {
+        console.log(data, a);
+      });
+
+      // Using Promise :
+
+      function getData() {
+        let apiData = fetch("https://jsonplaceholder.typicode.com/todos/1")
+          .then((res) => res.json())
+          .then((res) => console.log('fetch data using promise : ',res));
+      }
+
+      getData();
+
+      // using Async Await :
+      async function getUser() {
+        let data = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+        data = await data.json();
+        console.log('fetch data using async await : ',data);
+      }
+
+      getUser();
+    </script>
+  </body>
+</html>

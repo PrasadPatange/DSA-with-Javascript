@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Color</title>
+    <style>
+        #btn {
+          border: none;
+          margin: 20px;
+          padding: 10px;
+          border-radius: 5px;
+          font-weight: bold;
+          font-size: 20px;
+        }
+        .center {
+          text-align: center;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="center">
+        <button id="btn" onclick="randomN()">Random Color</button>
+        <h1 id="name"></h1>
+      </div>
+      <script>
+        const arr = [
+          'red',
+          'blue',
+          'orange',
+          'pink',
+          'blue',
+          'green',
+          'yellow',
+          'navy',
+          'black',
+          'grey',
+        ];
+        console.log(arr.length);
+        function randomN() {
+          let name = Math.floor(Math.random() * 10);
+          let randomName = document.getElementById('name');
+          let btn = document.getElementById('btn');
+          let newName = arr[name].charAt(0).toUpperCase() + arr[name].substr(1);
+          randomName.innerHTML = newName;
+          randomName.style.color = newName;
+          btn.style.background = newName;
+        //   if (newName === 'Black') {
+        //     btn.style.color = 'white';
+        //   } else {
+        //     btn.style.color = 'Black';
+        //   }
+          return (newName === 'Black') ? btn.style.color = 'white': btn.style.color = 'Black';
+          console.log(arr[name]);
+          console.log(name);
+        }
+        setInterval(() => {
+            randomN();
+        }, 1000);
+      </script>
+    </body>
+</html>

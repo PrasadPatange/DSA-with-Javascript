@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deep Copy And Shallow Copy</title>
+  </head>
+  <body>
+    <h1>Deep Copy And Shallow Copy</h1>
+    <script>
+      // Shallow Copy :
+      console.log("*** Shallow Copy ***");
+      const user = {
+        name: "prasad",
+        age: 23,
+      };
+      console.log(user);
+
+      const teacher = user;
+
+      console.log(teacher);
+
+      console.log("----------After-----------");
+      teacher.name = "deepak";
+      console.log(user);
+      console.log(teacher);
+
+      // Deep Copy
+      console.log("*** Deep Copy ***");
+      const user1 = {
+        name: "gajanan",
+        age: 55,
+      };
+
+      console.log(user1);
+      const teacher1 = JSON.parse(JSON.stringify(user1));
+      console.log(teacher1);
+
+      console.log("----------After-----------");
+      teacher1.name = "rohan";
+      console.log(user1);
+      console.log(teacher1);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anagram</title>
+  </head>
+  <body>
+    <h1>Anagram</h1>
+    <script>
+      // Anagram : two string with same character.
+      const str1 = "heart";
+      const str2 = "earth";
+
+      function anagram(str1, str2) {
+        let st1 = str1.split("").sort().join("");
+        let st2 = str2.split("").sort().join("");
+        return (st1 == st2 ) ? "Strings are Anagram": "String are not Anagram";
+      }
+      console.log(anagram(str1, str2));
+    </script>
+  </body>
+</html>

@@ -10,6 +10,24 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript
 
 4. Hoisting :
  Hoisting : Variable can be used before it has been declared.
+ 
+            JavaScript Hoisting : 
+
+            https://www.geeksforgeeks.org/javascript-hoisting/
+
+            What is hoisting with example in JavaScript?
+            Hoisting in JavaScript is a behavior in which a function or a variable can be used before declaration. 
+            For example, // using test before declaring console.log(test); // undefined var test; Run Code. The above program works and the output will be undefined .
+
+            console.log(test); // undefined
+            var test = "abc"; 
+
+            interpreter see :
+
+            var test;
+            console.log(test); // undefined
+            test = "abc";
+
 
 5. Temporal Dead Zone :
 - Temporal Dead Zone is the period of time during which the let and const declarations cannot be accessed.
@@ -146,3 +164,45 @@ Lexical Scope :
       map(function(){
 
       })
+
+
+    18. Some Important Links : 
+       
+      Difference Between class and Interface
+      https://javatpoint.com/typescript-class-vs-interface#:~:text=Classes%20are%20the%20fundamental%20entities%20used%20to%20create%20reusable%20components,a%20contract%20in%20our%20application.
+
+      example interface :
+      https://www.itsolutionstuff.com/post/how-to-use-interface-in-angularexample.html
+
+      example enum : defines list of named constants
+      https://www.telerik.com/blogs/angular-basics-working-enums#:~:text=Enums%20are%20one%20of%20the,values%20to%20non%2Dconst%20enums.
+
+      Enums are one of the features exclusive to TypeScript. We can use them to define a list of named constants, which lets us create easier-to-understand code by documenting distinct cases.
+
+      TypeScript includes numeric and string-based enums. And we can also assign computed values to non-const enums.
+
+ ** Topic ** 
+Shallow copy and Deep copy :
+https://www.geeksforgeeks.org/what-is-shallow-copy-and-deep-copy-in-javascript/#:~:text=This%20is%20known%20as%20shallow,other%20one%20ceases%20to%20exist.
+ 
+  19. Shallow copy : 
+
+     => From the above example, 
+     => it is seen that when the name of newEmployee is modified, 
+        it is also reflected for the old employee object. This can cause data inconsistency.This is known as shallow copy.
+
+     => The newly created object has the same memory address as the old one. 
+
+     => Hence, any change made to either of them changes the attributes for both. To overcome this problem, deep copy is used.
+        If one of them is removed from memory, the other one ceases to exist. In a way the two objects are interdependent.
+
+ 20. Deep Copy :
+
+    => Unlike the shallow copy,
+    =>  deep copy makes a copy of all the members of the old object, 
+        allocates separate memory location for the new object and then assigns the copied members to the new object. 
+        
+    => In this way, both the objects are independent of each other and in case of any modification to either one the other is not affected. 
+        Also, if one of the objects is deleted the other still remains in the memory. 
+        Now to create a deep copy of an object in JavaScript we use JSON.parse() and JSON.stringify() methods. 
+        Let us take an example to understand it better.

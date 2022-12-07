@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Callback | Promise | Async Await</title>
+  </head>
+  <body>
+    <h1>Callback | Promise | Async Await</h1>
+    <script>
+      // Scenario
+      /*
+          1) Register
+          2) Send Welcome Email 
+          3) Login 
+          4) Get User Data
+          5) Display User Data
+        */
+
+      // Using Callback :
+      /*
+      function Register(callback) {
+        setTimeout(() => {
+          console.log("1.Register End");
+          callback();
+        }, 2000);
+      }
+      function sendEmail(callback) {
+        setTimeout(() => {
+          console.log("2.Email End");
+          callback();
+        }, 5000);
+      }
+      function Login(callback) {
+        setTimeout(() => {
+          console.log("3.Login End");
+          callback();
+        }, 3000);
+      }
+      function getUserData(callback) {
+        setTimeout(() => {
+          console.log("4.Got User Data");
+          callback();
+        }, 4000);
+      }
+      function displayUserData() {
+        setTimeout(() => {
+          console.log("5.User Data Displayed");
+        }, 1000);
+      }
+      */
+
+      //   Callback Hell => thats deficult to handle
+      /*
+         Register(function () {
+             sendEmail(function () {
+               Login(function () {
+                  getUserData( function() {
+                     displayUserData();
+                });
+            });
+        });
+      });
+*/
+
+      // Promise and Async await :
+
+  function Register() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            console.log("1.Register End");
+            resolve();
+          }, 2000);
+        });
+      }
+      function sendEmail() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+              //   return reject("Error While Sending Email...")
+              console.log("2.Email End");
+              resolve();
+            }, 5000);
+        });
+      }
+      function Login() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            console.log("3.Login End");
+            resolve();
+          }, 3000);
+        });
+        
+      }
+      function getUserData() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            console.log("4.Got User Data");
+            resolve();
+          }, 4000);
+        });
+       
+      }
+      function displayUserData() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            console.log("5.User Data Displayed");
+            resolve();
+          }, 1000);
+        });
+       
+      }
+     
+    // Promise :
+     /*
+       Register()
+       .then(sendEmail)
+       .then(Login)
+       .then(getUserData)
+       .then(displayUserData)
+       .catch((err)=>{
+        console.log(err)
+       });
+
+       */
+
+       // Async await :
+       async function resolved(){
+              await Register();
+              await sendEmail();
+              await Login();
+              await getUserData();
+              await displayUserData();
+       } 
+       
+       resolved()
+       .catch(err => {
+        console.log(err);
+       });
+      console.log("do other work");
+    </script>
+  </body>
+</html>

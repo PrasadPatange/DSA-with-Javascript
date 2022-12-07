@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse String Word</title>
+</head>
+<body>
+    <h1>Input : I Love Javascript</h1>
+    <h1>Output : I evoL tpircsavaJ</h1>
+
+    <!-- 
+        1) split => string to Array
+        2) reverse => reverse Array
+        3) join => array to string
+     -->
+    <script>
+       const input = "I Love Javascript";
+
+       function ReverseString(data){
+        const arrInput = data.split(' ');
+         const result = arrInput.map(d=>{
+            return d.split('').reverse().join('');
+         });
+         const arrToStr = result.join(" ")
+         return arrToStr;
+       }
+      console.log( ReverseString(input));
+    </script>
+</body>
+</html>

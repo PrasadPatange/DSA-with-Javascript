@@ -1,0 +1,30 @@
+<!-- 
+    peeformance.now() => The performance.now() method will return  a timestamp in milliseconds.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time</title>
+</head>
+<body>
+    <h1> Time Required to process loop</h1>
+    <script>
+         function test(){
+            for (let i = 0; i < 100000; i++) {
+                //  Some Operation
+            }
+         }
+         console.time("Time Taken  : ");
+         test();
+         console.timeEnd("Time Taken  : ");
+
+        const t1 = performance.now();
+        test();
+        const t2 = performance.now();
+        console.log(`${t2 - t1} ms`)
+    </script>
+</body>
+</html>
