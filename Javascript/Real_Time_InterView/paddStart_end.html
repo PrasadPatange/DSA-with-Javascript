@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PaddingStart And PaddingEnd</title>
+</head>
+<body>
+    <script>
+        const fullNumber = '954745789654';
+        const last4Digits = fullNumber.slice(-4);
+        console.log(last4Digits.padStart(fullNumber.length,'*'));
+
+        const testData = 'Read More';
+        console.log(testData.padEnd(15,'.'))
+    </script>
+</body>
+</html>
