@@ -1,3 +1,15 @@
+HTML 5 Interview Questions : 
+https://www.interviewbit.com/html-interview-questions/
+
+https://www.softwaretestinghelp.com/html5-interview-questions/
+
+CSS Interview Questions :
+https://www.interviewbit.com/css-interview-questions/
+
+
+Javascript Interview Questions : 
+https://www.interviewbit.com/javascript-interview-questions/
+
 
 1. Temporal Dead Zone :
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz
