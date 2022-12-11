@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pass by value and Pass by Refference</title>
+</head>
+<body>
+    <script>
+        console.log('primitive Datatype : ');
+        // pass by value;
+        var y = 10;
+        var z = y;
+        console.log(y); //10
+        console.log(z); //10
+        y = 30;
+        console.log(y); //30
+        console.log(z); //10
+  
+        console.log('Non - primitive Datatype : ');
+  
+        // pass by refference(address)
+        var obj1 = { name: 'prasad' };
+        var obj2 = obj1;
+        console.log(obj1); //{ name: 'prasad' }
+        console.log(obj2); //{ name: 'prasad' }
+        obj1.name = 'pro';
+        console.log(obj1); //{ name: 'pro' }
+        console.log(obj2); //{ name: 'pro' }
+      </script>
+</body>
+</html>
