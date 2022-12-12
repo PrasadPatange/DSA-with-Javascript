@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function </title>
+</head>
+<body>
+   <script>
+    // tradition / normal function :
+     var tradFun = function(a,b){
+        return a + b;
+    }
+    console.log(tradFun(10,20));
+
+    // Arrow Function :  // shorter syntax | only can used in function expression | omits function keyword,return keyword,{},()
+    var arrowFun = (a,b) => a + b;
+    console.log(arrowFun(10,20));
+
+    // Main Difference "this" keyword of arrow function reffers parent scope i.e. Window Object
+
+    var obj1 = {
+        myFun : function(){
+            console.log(this);
+        }
+    }
+    obj1.myFun();
+
+    var obj2 = {
+        myFun2 : ()=>{
+            console.log(this);
+        }
+    }
+    obj2.myFun2();
+
+   </script>
+</body>
+</html>

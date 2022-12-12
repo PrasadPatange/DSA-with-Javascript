@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Parameter VS Spread Operator</title>
+</head>
+<body>
+    <script>
+        // Rest Parameter(...) : convert number of function argument into array with the help of rest parameter(...).
+         function restPara(...args){
+            console.log(args," : ",args[1])
+         }
+         restPara(1,2,3,4);
+
+        //  Spread Operator(...) : Used to spread Array or Objects. also use for clone. 
+
+        function spread(n1,n2,n3){
+            console.log(n1 + n2 + n3);
+        }
+        let arr = [1,2,3];
+        spread(...arr);
+
+        // Clone Array :
+        const arr1 = [1,2,3,4,5];
+        const arr2 = [...arr1];
+        console.log(arr2)
+        // Merge : 
+        const arr3 = [...arr1,...arr2]
+        console.log(arr3);
+
+        // Clone Object :
+        const Obj1 = {
+            name:"prasad",
+            age:23
+        }
+        const Obj2 = {...Obj1};
+        console.log(Obj2);
+        
+    </script>
+</body>
+</html>

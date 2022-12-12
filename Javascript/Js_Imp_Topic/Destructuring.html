@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destructuring</title>
+  </head>
+  <body>
+    <script>
+        // Object Destructuring :
+        const user = {
+          name: "prasad",
+          email: "prasad@gmail.com",
+          age: 23,
+        };
+
+        // Before ES6
+
+        // const name = user.name;
+        // const email = user.email;
+        // const age = user.age;
+
+        // After ES6 (Destructuring)
+
+        const { name, email, age } = user;
+
+        console.log(name);
+        console.log(email);
+        console.log(age);
+
+        // Array Destructuring :
+        const arr = [1, 2, 3, 4];
+
+        // Before ES6
+
+        // const first = arr[0];
+        // const second = arr[1];
+        // const third = arr[2];
+        // const forth = arr[3];
+
+        // After ES6 (Destructuring)
+
+        const [first, second, third, forth] = arr;
+
+        console.log(first);
+        console.log(second);
+        console.log(third);
+        console.log(forth);
+
+      //   also use to swap values
+      const arr1 = [1,2];
+             [1,2] = [2,1];
+            console.log(arr1);
+            
+    </script>
+  </body>
+</html>

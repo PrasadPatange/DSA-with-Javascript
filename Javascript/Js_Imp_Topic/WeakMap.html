@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeakMap</title>
+</head>
+<body>
+    <script>
+        const map1 = new Map();
+        map1.set('value', 2);
+        console.log(map1) //{'value' => 2}
+
+        // const weakmap1 = new WeakMap();
+        // weakmap1.set('value', 2);
+        // console.log(weakmap1) // Throw Error
+
+        const weakmap1 = new WeakMap();
+        const obj = {name:"prasad"}
+        weakmap1.set(obj,{age:23});
+        console.log(weakmap1) //key : {name: 'prasad'} value : {age: 23}
+
+
+    </script>
+</body>
+</html>

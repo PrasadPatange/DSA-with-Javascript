@@ -51,8 +51,9 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript
   In other words, an item's lexical scope is the place in which the item got created.
 - JavaScript uses lexical scoping to resolve the variable names when a function is created inside another function. 
   It determines the function's parent scope by looking at where the function was created instead of where it was invoked.
-- Lexical scope means that in a nested group of functions, the inner functions have access to the variables and other resources of their parent scope. This means that the child's functions are lexically bound to the execution context of their parents.
- Lexical scope is sometimes also referred to as static scope.
+- Lexical scope means that in a nested group of functions, the inner functions have access to the variables and other resources of their parent scope. 
+  This means that the child's functions are lexically bound to the execution context of their parents.
+   Lexical scope is sometimes also referred to as static scope.
 
 7. Closure : 
 - A function with lexical scope is known as closure. 
@@ -68,6 +69,12 @@ In other words, a closure gives you access to an outer function's scope from an 
 In JavaScript, closures are created every time a function is created, at function creation time.
 
 - A closure is the combination of a function and the lexical environment within which that function was declared. 
+
+- Closures are an ability of a function to remember the variables and functions that are declared in its outer scope.
+
+- This ability of a function to store a variable for further reference even after it is executed is called Closure.
+
+
 
 Important for closure :
 
@@ -114,6 +121,9 @@ Lexical Scope :
   - Currying is a checking method to make sure that you get everything you need before you proceed. 
   - It helps you to avoid passing the same variable again and again. It divides your function into multiple 
     smaller functions that can handle one responsibility.
+  - Currying is when you break down a function that takes multiple arguments into a series of 
+    functions that each take only one argument.
+  - Currying is an advanced technique to transform a function of arguments n, to n functions of one or fewer arguments.
 
 13. Pure Functinons are Predictable , Readable , Reusable , Testable.
     What is Pure Functions ?
@@ -218,3 +228,294 @@ https://www.geeksforgeeks.org/what-is-shallow-copy-and-deep-copy-in-javascript/#
         Also, if one of the objects is deleted the other still remains in the memory. 
         Now to create a deep copy of an object in JavaScript we use JSON.parse() and JSON.stringify() methods. 
         Let us take an example to understand it better.
+
+
+21) Explain “this” keyword :
+
+   => The “this” keyword refers to the object that the function is a property of.
+
+   => The value of the “this” keyword will always depend on the object that is invoking the function.
+   
+   => Example 1 :
+     
+     function test(){
+      console.log(this);
+     }
+     test();
+
+     Since the function is invoked in the global context, the function is a property of the global object.
+     Therefore, the output of the above code will be the global object.
+     Since we ran the above code inside the browser, the global object is the window object.
+
+     => Example 2 :
+
+     var obj = {
+    name:  "vivek",
+    getName: function(){
+    console.log(this.name);
+     }
+    }
+   
+    obj.getName();
+
+    In the above code, at the time of invocation, the getName function is a property of the object obj ,
+    therefore, this keyword will refer to the object obj, and hence the output will be “vivek”.
+
+  
+
+22) call | apply | bind : 
+  
+  => this functions are predefined functions in javascript .
+  => used for function borrowing . i.e. we can borrow function from one object to another.
+
+  1) call() :  It is called function borrowing.
+     => call() allows an object to use method(function) of another object.
+     => call() method takes arguments separately.
+
+  2) apply() : pass argument as a arrayList.
+     => The apply method is similar to the call() method. The only difference is that,
+     => call() method takes arguments separately whereas, apply() method takes arguments as an array.
+
+  3) bind() : 
+     => using bind() we can create copy of our function and according to need we invoked it later.
+     => not directly called first create copy.
+
+
+23) What is memoization(Yad rakhna) : 
+    => Memoization is a form of caching where the return value of a function is cached based on its parameters.
+       If the parameter of that function is not changed, the cached version of the function is returned.
+    => Note- Memoization is used for expensive function calls but in the following example,
+        we are considering a simple function for understanding the concept of memoization better.
+    
+
+  function addTo256(num){
+  return num + 256;
+}
+addTo256(20); // Returns 276
+addTo256(40); // Returns 296
+addTo256(20); // Returns 276
+In the code above, we have written a function that adds the parameter to 256 and returns it.
+
+When we are calling the function addTo256 again with the same parameter (“20” in the case above), we are computing the result again for the same parameter.
+
+Computing the result with the same parameter, again and again, is not a big deal in the above case, but imagine if the function does some heavy-duty work, then, computing the result again and again with the same parameter will lead to wastage of time.
+
+This is where memoization comes in, by using memoization we can store(cache) the computed results based on the parameters. If the same parameter is used again while invoking the function, instead of computing the result, we directly return the stored (cached) value.
+
+Let’s convert the above function addTo256, to a memoized function:
+
+function memoizedAddTo256(){
+  var cache = {};
+
+  return function(num){
+    if(num in cache){
+      console.log("cached value");
+      return cache[num]
+    }
+    else{
+      cache[num] = num + 256;
+      return cache[num];
+    }
+  }
+}
+var memoizedFunc = memoizedAddTo256();
+
+memoizedFunc(20); // Normal return
+memoizedFunc(20); // Cached return
+In the code above, if we run the memoizedFunc function with the same parameter, instead of computing the result again, it returns the cached result.
+
+Note- Although using memoization saves time, it results in larger consumption of memory since we are storing all the computed results.
+
+
+24) What are arrow functions?
+   => Arrow functions were introduced in the ES6 version of javascript. 
+      They provide us with a new and shorter syntax for declaring functions. 
+      Arrow functions can only be used as a function expression.
+
+25)  Rest parameter : 
+    =>  rest parameter was introduced in the ES6 version of javascript.
+
+    => Rest parameter ( … ):
+
+     1) It provides an improved way of handling the parameters of a function.
+     2) Using the rest parameter syntax, we can create functions that can take a variable number of arguments.
+     3) Any number of arguments will be converted into an array using the rest parameter.
+     4) It also helps in extracting all or some parts of the arguments.
+     5) Rest parameters can be used by applying three dots (...) before the parameters.
+
+     Ex : 
+     function extractingArgs(...args){
+          return args[1];
+            }
+
+         extractingArgs(8,9,1); // Returns 9
+
+      **Note- Rest parameter should always be used at the last parameter of a function:
+
+      Ex : function randomFunc2(a,b,...args){
+                         //Do something
+                        }
+
+26) Spread operator :
+   =>  Spread operator was introduced in the ES6 version of javascript.
+
+   => Spread operator (…): 
+       => Although the syntax of the spread operator is exactly the same as the rest parameter,
+       => the spread operator is used to spreading an array, and object literals. 
+       => We also use spread operators where one or more arguments are expected in a function call.
+       => Spread Operator are use to clone array and object.
+    
+  => Ex :
+             function addFourNumbers(num1,num2,num3,num4){
+                return num1 + num2 + num3 + num4;
+              }
+
+              let fourNumbers = [5, 6, 7, 8];
+
+
+              addFourNumbers(...fourNumbers);
+              // Spreads [5,6,7,8] as 5,6,7,8
+
+              let array1 = [3, 4, 5, 6];
+              let clonedArray1 = [...array1];
+              // Spreads the array into 3,4,5,6
+              console.log(clonedArray1); // Outputs [3,4,5,6]
+
+
+              let obj1 = {x:'Hello', y:'Bye'};
+              let clonedObj1 = {...obj1}; // Spreads and clones obj1
+              console.log(obj1);
+
+              let obj2 = {z:'Yes', a:'No'};
+              let mergedObj = {...obj1, ...obj2}; // Spreads both the objects and merges it
+              console.log(mergedObj);
+              // Outputs {x:'Hello', y:'Bye',z:'Yes',a:'No'};
+  
+  => 
+
+  *** Note - Key differences between rest parameter and spread operator:
+
+          Rest parameter is used to take a variable number of arguments and turns them into an array while
+           the spread operator takes an array or an object and spreads it.
+          Rest parameter is used in function declaration whereas the spread operator is used in function calls.
+  
+
+27) What is the use of promises in javascript?
+
+   => Promises are used to handle asynchronous operations in javascript.
+
+   => Before promises, callbacks were used to handle asynchronous operations. But due to the limited functionality of callbacks, using multiple callbacks to handle asynchronous code can lead to unmanageable code.
+
+   => Promise object has four states -
+
+      Pending - Initial state of promise. This state represents that the promise has neither been fulfilled nor been rejected, it is in the pending state.
+      Fulfilled - This state represents that the promise has been fulfilled, meaning the async operation is completed.
+      Rejected - This state represents that the promise has been rejected for some reason, meaning the async operation has failed.
+      Settled - This state represents that the promise has been either rejected or fulfilled.
+     
+     => A promise is created using the Promise constructor which takes in a callback function with two parameters, resolve and reject respectively.
+
+      const promise  = new Promise((resolve,reject)=>{});
+      
+     => "resolve" is a function that will be called when the async operation has been successfully completed.
+
+     => "reject" is a function that will be called, when the async operation fails or if some error occurs.
+    
+  => Promises are used to handle asynchronous operations like server requests.
+
+    promise.then(res => console.log(res)).catch(err => console.log(err));
+
+     => "then()" method is used to access the result when the promise is fulfilled.
+
+     => "catch()" method is used to access the result/error when the promise is rejected.
+
+
+28) What are classes in javascript?
+   => Introduced in the ES6 version, classes are nothing but syntactic sugars for constructor functions. 
+   => They provide a new way of declaring constructor functions in javascript.  
+
+   => Key points to remember about classes:
+
+    => Unlike functions, classes are not hoisted. A class cannot be used before it is declared.
+    => A class can inherit properties and methods from other classes by using the extend keyword.
+    => All the syntaxes inside the class must follow the strict mode(‘use strict’) of javascript. An error will be thrown if the strict mode rules are not followed.
+ 
+   => Below are the examples of how classes are declared and used:
+
+   // Before ES6 version, using constructor functions => 
+              function Student(name,rollNumber,grade,section){
+                this.name = name;
+                this.rollNumber = rollNumber;
+                this.grade = grade;
+                this.section = section;
+              }
+
+              // Way to add methods to a constructor function
+              Student.prototype.getDetails = function(){
+                return 'Name: ${this.name}, Roll no: ${this.rollNumber}, Grade: ${this.grade}, Section:${this.section}';
+              }
+
+
+              let student1 = new Student("Vivek", 354, "6th", "A");
+              student1.getDetails();
+              // Returns Name: Vivek, Roll no:354, Grade: 6th, Section:A
+
+    // ES6 version classes =>
+              class Student{
+                constructor(name,rollNumber,grade,section){
+                  this.name = name;
+                  this.rollNumber = rollNumber;
+                  this.grade = grade;
+                  this.section = section;
+                }
+
+                // Methods can be directly added inside the class
+                getDetails(){
+                  return 'Name: ${this.name}, Roll no: ${this.rollNumber}, Grade:${this.grade}, Section:${this.section}';
+                }
+              }
+
+              let student2 = new Student("Garry", 673, "7th", "C");
+              student2.getDetails();
+              // Returns Name: Garry, Roll no:673, Grade: 7th, Section:C
+
+
+29) Explain WeakSet in javascript : 
+   => In javascript, a Set is a collection of unique and ordered elements. 
+   => Just like Set, WeakSet is also a collection of unique and ordered elements with some key differences:
+
+     1)  Weakset contains "only objects" and no other type.
+     2) An object inside the weakset is referenced weakly. This means, that if the object inside the weakset does not have a reference, it will be garbage collected.
+     3) Unlike Set, WeakSet only has three methods, add() , delete() and has() .
+
+     Ex : 
+            const newSet = new Set([4, 5, 6, 7]);
+            console.log(newSet);// Outputs Set {4,5,6,7}
+
+            const newSet2 = new WeakSet([3, 4, 5]); //Throws an error
+
+
+            let obj1 = {message:"Hello world"};
+            const newSet3 = new WeakSet([obj1]);
+            console.log(newSet3.has(obj1)); // true
+
+30) Explain WeakMap in javascript :
+    => In javascript, Map is used to store key-value pairs. 
+    => The key-value pairs can be of both primitive and non-primitive types. WeakMap is similar to Map with key differences:
+
+    => The keys and values in weakmap should always be an object.
+    => If there are no references to the object, the object will be garbage collected.
+    => Ex :
+              const map1 = new Map();
+              map1.set('Value', 1);
+
+              const map2 = new WeakMap();
+              map2.set('Value', 2.3); // Throws an error
+
+              let obj = {name:"Vivek"};
+              const map3 = new WeakMap();
+              map3.set(obj, {age:23});
+
+
+31)  Object destructuring  :
+   => Object destructuring is a new way to extract elements from an object or an array.
