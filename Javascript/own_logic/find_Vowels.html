@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Write the code to find the vowels</title>
+</head>
+<body>
+    <script>
+        // Write the code to find the vowels
+        function vowel(str) {
+          let count = 0;
+          const vowels = ['a', 'e', 'i', 'o', 'u'];
+          for (let char of str.toLowerCase()) {
+            // console.log(char);
+            if (vowels.includes(char)) {
+              count++;
+            }
+          }
+          return count;
+        }
+        console.log(vowel('prasad'));
+      </script>
+</body>
+</html>
