@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polyfill for bind()</title>
+</head>
+<body>
+
+    <!--
+        Polyfill =>
+        Polyfill is a function which is created as a replacement to existing function to make it 
+        compactible with all the browsers.
+     -->
+
+    <script>
+        function getName(city1,city2){
+            console.log(this.fname + " " + this.lname + " Lives In " + city1 + " " + city2 );
+            // prasad patange Lives In mumbai delhi
+        }
+
+        let Person = {
+            fname:"prasad",
+            lname:"patange"
+        }
+
+
+
+        // using javascript build in method bind() => 
+
+        // const bindName = getName.bind(Person,"mumbai");
+        // bindName("delhi")
+
+        // create polyfill method => replacement function for bind()
+
+        Function.prototype.MyBind = function(obj, ...args1){
+            const func = this;
+            return function(...args2){
+               return func.apply(obj,[...args1,...args2]);
+            }
+        }
+
+        const bindName = getName.MyBind(Person,"mumbai");
+        bindName("delhi")
+        
+    </script>
+
+</body>
+</html>

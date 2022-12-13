@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local | Session Storage | Cookies</title>
+</head>
+<body>
+    <h1>Local | Session Storage | Cookies</h1>
+    <button onclick="counter()">Increase</button>
+    <script>
+        // localStorage : 
+        // 1) create
+        localStorage.setItem("city","mumbai");
+        // 2) read
+        const name = localStorage.getItem("name");
+        console.log(name);
+        // 3) update
+        localStorage.setItem("name","Gajanan");
+        // 4) delete
+        // localStorage.removeItem("name");
+        // 5) remove all
+        // localStorage.clear();
+// -------------------------------------------------------------------
+// sessionStorage :
+// 1) create
+        sessionStorage.setItem("name","prasad");
+        sessionStorage.setItem("city","mumbai");
+        // 2) read
+        const name1 = sessionStorage.getItem("name");
+        console.log("sessionStorage : ",name1)
+        // 3) update
+        sessionStorage.setItem("name","gajanan");
+        // 4) delete
+        sessionStorage.removeItem("name")
+        // 5) remove all
+        sessionStorage.clear()
+// -------------------------------------------------------------------
+
+// cookie :
+document.cookie = "userName= roman; expires= 20 april 2023 12:00:00 UTC";
+document.cookie = "userAge= 30; expires= 20 april 2023 12:00:00 UTC";
+
+// In console : 
+// document.cookie
+// 'userName=roman; userAge=30'
+
+
+let count = 0;
+function counter(){
+ count++;
+ localStorage.setItem("count",count);
+ sessionStorage.setItem("count",count);
+}
+
+    </script>
+</body>
+</html>

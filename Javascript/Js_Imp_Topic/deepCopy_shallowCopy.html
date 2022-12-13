@@ -14,23 +14,45 @@
       const user = {
         name: "prasad",
         age: 23,
+        address: {
+          city: "mumbai",
+        },
+        email: function () {
+          console.log("email");
+        },
       };
-      console.log(user);
+      console.log("user : ", user);
 
-      const teacher = user;
+      // normal copy
+      // const teacher = user;
 
-      console.log(teacher);
+      // shallow copy
+      const teacher = { ...user };
+
+      console.log("teacher : ", teacher);
 
       console.log("----------After-----------");
       teacher.name = "deepak";
-      console.log(user);
-      console.log(teacher);
+      teacher.address.city = "virar";
+
+      console.log("user : ", user);
+      console.log("teacher : ", teacher);
+
+
+      console.log("user city : ", user.address.city);
+      console.log("teacher city : ", teacher.address.city);
 
       // Deep Copy
       console.log("*** Deep Copy ***");
       const user1 = {
         name: "gajanan",
         age: 55,
+        address: {
+          city: "mumbai",
+        },
+        email: function () {
+          console.log("email");
+        },
       };
 
       console.log(user1);
@@ -39,8 +61,14 @@
 
       console.log("----------After-----------");
       teacher1.name = "rohan";
-      console.log(user1);
-      console.log(teacher1);
+     teacher1.address.city = "virar";
+      
+      console.log("user1 : ", user1);
+      console.log("teacher1 : ", teacher1);
+
+
+      console.log("user1 city : ", user1.address.city);
+      console.log("teacher1 city : ", teacher1.address.city);
     </script>
   </body>
 </html>

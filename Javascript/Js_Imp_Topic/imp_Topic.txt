@@ -10,6 +10,10 @@ https://www.interviewbit.com/css-interview-questions/
 Javascript Interview Questions : 
 https://www.interviewbit.com/javascript-interview-questions/
 
+To Understand How JavaScript Works (Event Loop) :
+http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D
+
+
 
 1. Temporal Dead Zone :
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz
@@ -228,6 +232,8 @@ https://www.geeksforgeeks.org/what-is-shallow-copy-and-deep-copy-in-javascript/#
         Also, if one of the objects is deleted the other still remains in the memory. 
         Now to create a deep copy of an object in JavaScript we use JSON.parse() and JSON.stringify() methods. 
         Let us take an example to understand it better.
+
+     => to make proper deep copy use loadslash libary.
 
 
 21) Explain “this” keyword :
@@ -519,3 +525,57 @@ Note- Although using memoization saves time, it results in larger consumption of
 
 31)  Object destructuring  :
    => Object destructuring is a new way to extract elements from an object or an array.
+
+32) localStorage vs sessionStorage vs Cookies :
+
+1) localStorage : 
+  => we can store data in browser for forever using localStorage.
+  => we can only access localStorage at client side not server side (gives error).
+  => their is no need to set expiry date.
+  => storage size 5MB.
+
+2) sessionStorage :
+  => sessionStorage is for one session i.e. for particular tab or window.
+  => we can only access sessionStorage at client side not server side (gives error).
+  => their is no need to set expiry date.
+  => storage size 5MB.
+
+3) Cookie :
+ => cookie have a expiry date.
+ => for cookie we have to set expiry date.
+ => cookie can access both client side as well as server side.
+ => storage size 4kB (less)
+
+
+Difference :
+
+                    Cookie                          localStorage                           sessionStorage
+ -------------------------------------------------------------------------------------------------------------------------
+ Initiator        client or server.                    Client                                   Client
+                  server can use set-Cookie 
+                  header.
+
+ Expiry           Manually Set                           Forever                                on tab closure
+
+ Persistent        depends on whether                    Yes                                      No 
+ across browser    expiration is set
+ sessions                   
+
+
+sent to server     cookies are automatically             No                                       No
+with every http    being sent via cookie
+request            header
+
+ 
+Capacity            4KB                                 5MB                                       5MB
+(per Domain)
+
+Accessibility       Any Window                        Any Window                                   Same Tab 
+
+
+
+
+33) polyfills :
+
+  => Polyfill is a function which is created as a replacement to existing function to make it 
+    compactible with all the browsers.
